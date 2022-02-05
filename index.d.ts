@@ -9,6 +9,7 @@ declare module 'klazify' {
    */
   function init(opts?: {
     theme?: {
+      defaultFontFamily?: string,
       blue?: string,
       indigo?: string,
       purple?: string,
@@ -38,8 +39,8 @@ declare module 'klazify' {
       black?: string,
       text?: string,
       'text-light'?: string,
-      'text-50'?: string,
-      'text-light-50'?: string,
+      btnPaddingHorizontal?: string | number,
+      btnPaddingVertical?: string | number,
     },
     extraGlobalVars?: EStyleSheet.AnyObject,
     customClasses?: () => EStyleSheet.AnyObject,

@@ -26,7 +26,9 @@ const init = (opts = {
 
     withLogs = _.get(opts, 'logs');
 
-    const defaultColors = {
+    const defaultTheme = {
+        defaultFontFamily: undefined,
+
         blue: '#0d6efd',
         indigo: '#6610f2',
         purple: '#6f42c1',
@@ -60,12 +62,13 @@ const init = (opts = {
         btnPaddingHorizontal: '1rem',
         btnPaddingVertical: '0.75rem',
     };
-    const colors = _.merge(defaultColors, _.get(opts, 'theme'));
+    const colors = _.merge(defaultTheme, _.get(opts, 'theme'));
     if (withLogs) {
         console.log('klazify', 'colors', colors);
     }
     const defaultGlobalVars = {
         $rem: 12,
+        $defaultFontFamily: _.get(colors, 'defaultFontFamily'),
         $blue: _.get(colors, 'blue'),
         $indigo: _.get(colors, 'indigo'),
         $purple: _.get(colors, 'purple'),
