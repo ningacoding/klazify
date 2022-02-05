@@ -56,8 +56,6 @@ const init = (opts = {
         black: '#000',
         text: '#000',
         'text-light': '#FFF',
-        'text-50': 'rgba(0,0,0,0.5)',
-        'text-light-50': 'rgba(255,255,255,0.5)',
     };
     const colors = _.merge(defaultColors, _.get(opts, 'theme'));
     if (withLogs) {
