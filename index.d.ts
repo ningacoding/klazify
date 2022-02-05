@@ -42,7 +42,7 @@ declare module 'klazify' {
       'text-light-50'?: string,
     },
     extraGlobalVars?: EStyleSheet.AnyObject,
-    customClasses?: EStyleSheet.AnyObject,
+    customClasses?: () => EStyleSheet.AnyObject,
     logs?: boolean,
   });
   

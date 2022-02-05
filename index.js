@@ -13,7 +13,7 @@ let withLogs;
 const init = (opts = {
     theme: undefined,
     extraGlobalVars: undefined,
-    customClasses: undefined,
+    customClasses: () => undefined,
     logs: false,
 }) => {
 
@@ -103,7 +103,11 @@ const init = (opts = {
         console.log('klazify', 'rawGlobalVars', rawGlobalVars);
     }
     EStyleSheet.build(rawGlobalVars);
-    const allClasses = _.merge(defaultClasses, _.get(opts, 'customClasses'));
+    const customClassesMethod = _.get(opts, 'customClasses');
+    if (typeof customClassesMethod !== 'function') {
+        throw new Error('customClasses must be a method / function.');
+    }
+    const allClasses = _.merge(defaultClasses, customClassesMethod());
     if (withLogs) {
         console.log('klazify', 'available classes ->\n', _.keys(allClasses).join(','));
     }
