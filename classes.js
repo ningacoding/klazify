@@ -321,8 +321,9 @@ const defaultClasses = () => ({
         paddingVertical: '$btnPaddingVertical',
     },
     'btn-outline-white': {
+        backgroundColor: '$white',
         borderWidth: 1,
-        borderColor: '$white',
+        borderColor: Color(EStyleSheet.value('$white')).darken(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -485,7 +486,7 @@ const defaultClasses = () => ({
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
     },
-    'btn-primar': {
+    'btn-primary': {
         backgroundColor: '$primary',
         borderWidth: 1,
         borderColor: Color(EStyleSheet.value('$primary')).lighten(0.32).hex(),
