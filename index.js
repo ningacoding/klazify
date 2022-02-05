@@ -38,12 +38,12 @@ const init = (opts = {
         teal: '#20c997',
         cyan: '#0dcaf0',
         gray: '#6c757d',
-        'gray1': '#ECEFF4',
-        'gray2': '#d6dfe9',
-        'gray3': '#A7B3C3',
-        'gray4': '#7A8796',
-        'gray5': '#343a40',
-        'gray-dark': '#343a40',
+        gray1: '#ECEFF4',
+        gray2: '#d6dfe9',
+        gray3: '#A7B3C3',
+        gray4: '#7A8796',
+        gray5: '#343a40',
+        grayDark: '#343a40',
         primary: '#0d6efd',
         secondary: '#6c757d',
         success: '#198754',
@@ -55,7 +55,7 @@ const init = (opts = {
         dark: '#212529',
         black: '#000',
         text: '#000',
-        'text-light': '#FFF',
+        textLight: '#FFF',
     };
     const colors = _.merge(defaultColors, _.get(opts, 'theme'));
     if (withLogs) {
@@ -79,7 +79,7 @@ const init = (opts = {
         $gray3: _.get(colors, 'gray3'),
         $gray4: _.get(colors, 'gray4'),
         $gray5: _.get(colors, 'gray5'),
-        '$gray-dark': _.get(colors, 'gray-dark'),
+        $grayDark: _.get(colors, 'grayDark'),
         $primary: _.get(colors, 'primary'),
         $secondary: _.get(colors, 'secondary'),
         $success: _.get(colors, 'success'),
@@ -91,9 +91,7 @@ const init = (opts = {
         $dark: _.get(colors, 'dark'),
         $black: _.get(colors, 'black'),
         $text: _.get(colors, 'text'),
-        '$text-light': _.get(colors, 'text-light'),
-        '$text-50': _.get(colors, 'text-50'),
-        '$text-light-50': _.get(colors, 'text-light-50'),
+        $textLight: _.get(colors, 'textLight'),
     };
     /**
      * extraGlobalVars will override existing vars in defaultGlobalVars if some var name is exactly equal.

@@ -248,7 +248,7 @@ const defaultClasses = () => ({
     },
     'btn-outline-gray-dark': {
         borderWidth: 1,
-        borderColor: '$gray-dark',
+        borderColor: '$grayDark',
         borderRadius: 5,
         padding: '1rem',
     },
@@ -432,7 +432,7 @@ const defaultClasses = () => ({
         padding: '1rem',
     },
     'btn-gray-dark': {
-        backgroundColor: '$gray-dark',
+        backgroundColor: '$grayDark',
         borderWidth: 1,
         borderColor: Color(EStyleSheet.value('$gray-dark')).lighten(0.32).hex(),
         borderRadius: 5,
@@ -1463,15 +1463,15 @@ const defaultClasses = () => ({
     'text-white': {color: '$white'},
     'text-dark': {color: '$dark'},
     'text-black': {color: '$black'},
-    'text-light': {color: '$text-light'},
+    'text-light': {color: '$textLight'},
     'text-gray-1': {color: '$gray1'},
     'text-gray-2': {color: '$gray2'},
     'text-gray-3': {color: '$gray3'},
     'text-gray-4': {color: '$gray4'},
     'text-gray-5': {color: '$gray5'},
-    'text-gray-dark': {color: '$gray-dark'},
+    'text-gray-dark': {color: '$grayDark'},
     'text-50': {color: Color(EStyleSheet.value('$text')).lighten(0.5).hex()},
-    'text-light-50': {color: Color(EStyleSheet.value('$text-light')).lighten(0.5).hex()},
+    'text-light-50': {color: Color(EStyleSheet.value('$textLight')).lighten(0.5).hex()},
 
     // Toast
     'toast-body': {},
