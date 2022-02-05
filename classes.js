@@ -1571,31 +1571,37 @@ const defaultClasses = () => ({
     'fw-lighter': {},
     'fw-normal': {},
     'h1': {
+        fontFamily: '$defaultFontFamily',
         fontSize: '3rem',
         fontWeight: 'bold',
         paddingVertical: '1rem',
     },
     'h2': {
+        fontFamily: '$defaultFontFamily',
         fontSize: '2.5rem',
         fontWeight: 'bold',
         paddingVertical: '1rem',
     },
     'h3': {
+        fontFamily: '$defaultFontFamily',
         fontSize: '2rem',
         fontWeight: 'bold',
         paddingVertical: '1rem',
     },
     'h4': {
+        fontFamily: '$defaultFontFamily',
         fontSize: '1.6rem',
         fontWeight: 'bold',
         paddingVertical: '1rem',
     },
     'h5': {
+        fontFamily: '$defaultFontFamily',
         fontSize: '1.2rem',
         fontWeight: 'bold',
         paddingVertical: '1rem',
     },
     'h6': {
+        fontFamily: '$defaultFontFamily',
         fontSize: '1rem',
         fontWeight: 'bold',
         paddingVertical: '1rem',
