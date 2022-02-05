@@ -2,8 +2,6 @@
  * More info about extended stylesheet visit:
  * @link https://github.com/vitalets/react-native-extended-stylesheet
  */
-import EStyleSheet from 'react-native-extended-stylesheet';
-import Color from 'color';
 
 const defaultClasses = {
 
@@ -132,10 +130,7 @@ const defaultClasses = {
     'radio as button': {},
 
     // Buttons
-    'btn': {
-        borderWidth: 1,
-        // borderColor: Color(EStyleSheet.value('$primary')).darken(0.16).hex(),
-    },
+    'btn': {},
     'btn-close': {},
     'btn-close-white': {},
     'btn-danger': {},
