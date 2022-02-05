@@ -1,3 +1,6 @@
+import {EStyleSheet} from 'klazify';
+import Color from 'color';
+
 /**
  * More info about extended stylesheet visit:
  * @link https://github.com/vitalets/react-native-extended-stylesheet
@@ -130,7 +133,10 @@ const defaultClasses = {
     'radio as button': {},
 
     // Buttons
-    'btn': {},
+    'btn': {
+        backgroundColor: '$primary',
+        borderColor: Color(EStyleSheet.value('$primary')).lighten(0.32).hex(),
+    },
     'btn-close': {},
     'btn-close-white': {},
     'btn-danger': {},

@@ -8,6 +8,9 @@ let withLogs;
 /**
  * This method must be run before css() method.
  * @param opts
+ *
+ * customClasses must be a function / method that returns an object, so EStyleSheet.value() is accesible
+ *
  * @private
  */
 const init = (opts = {
@@ -126,7 +129,7 @@ const css = (styles) => {
     if (typeof styles === 'string') {
         const picked = _.pick(classes, styles.split(' '));
         if (withLogs) {
-            console.log('klazify', 'classes input -> ', styles, 'styles ->\n', picked);
+            console.log('klazify\n', 'classes input -> ', styles, '\nstyles ->\n', picked);
         }
         return _.keys(picked).reduce((update, previous) => ({...update, ...picked[previous]}), {});
     }
