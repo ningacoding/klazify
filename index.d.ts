@@ -53,6 +53,6 @@ declare module 'klazify' {
    */
   function css(styles: string | object);
   
-  export {init, css};
+  export {init, css, EStyleSheet};
   
 }
