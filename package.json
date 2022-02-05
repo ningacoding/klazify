@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {},
   "repository": {
-    "directory": "https://github.com/ningacoding/klazify",
+    "url": "https://github.com/ningacoding/klazify.git",
     "type": "git"
   },
   "keywords": [
