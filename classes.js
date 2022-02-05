@@ -134,7 +134,7 @@ const defaultClasses = {
     // Buttons
     'btn': {
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$primary')).darken(0.16).hex(),
+        // borderColor: Color(EStyleSheet.value('$primary')).darken(0.16).hex(),
     },
     'btn-close': {},
     'btn-close-white': {},
