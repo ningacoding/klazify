@@ -1,0 +1,19 @@
+{
+  "name": "klazify",
+  "version": "0.0.0-beta5",
+  "description": "Fast, Reusable, React Native stylesheets classes.",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "react-native",
+    "css",
+    "class",
+    "klazify"
+  ],
+  "author": "klazify",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "react-native-extended-stylesheet": "^0.12.0"
+  }
+}
