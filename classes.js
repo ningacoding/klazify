@@ -1,8 +1,10 @@
-
 /**
  * More info about extended stylesheet visit:
  * @link https://github.com/vitalets/react-native-extended-stylesheet
  */
+import EStyleSheet from 'react-native-extended-stylesheet';
+import Color from 'color';
+
 const defaultClasses = {
 
     // Accordion
@@ -130,7 +132,10 @@ const defaultClasses = {
     'radio as button': {},
 
     // Buttons
-    'btn': {},
+    'btn': {
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$primary')).darken(0.1).hexString(),
+    },
     'btn-close': {},
     'btn-close-white': {},
     'btn-danger': {},
