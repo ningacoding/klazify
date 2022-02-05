@@ -1,11 +1,26 @@
 declare module 'klazify' {
-  function init(opts: {
-    theme?: object,
-    extraGlobalVars?: object,
-    customClasses?: object,
+  
+  import * as EStyleSheet from 'react-native-extended-stylesheet';
+  
+  /**
+   * This method must be run before css() method.
+   * @param opts
+   * @private
+   */
+  function init(opts?: {
+    theme?: EStyleSheet.AnyObject,
+    extraGlobalVars?: EStyleSheet.AnyObject,
+    customClasses?: EStyleSheet.AnyObject,
   });
   
-  function css(classes: string | object);
+  /**
+   * Applies all rules for StyleSheets (from react-native)
+   * and EStyleSheets (from react-native-extended-stylesheet)
+   * @param styles
+   * @private
+   */
+  function css(styles: string | object);
   
   export {init, css};
+  
 }
