@@ -434,7 +434,7 @@ const defaultClasses = () => ({
     'btn-gray-dark': {
         backgroundColor: '$grayDark',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$gray-dark')).lighten(0.32).hex(),
+        borderColor: Color(EStyleSheet.value('$grayDark')).lighten(0.32).hex(),
         borderRadius: 5,
         padding: '1rem',
     },
