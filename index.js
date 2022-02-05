@@ -110,7 +110,7 @@ const init = (opts = {
     if (typeof customClassesMethod !== 'function') {
         throw new Error('customClasses must be a method / function.');
     }
-    const allClasses = _.merge(defaultClasses, customClassesMethod());
+    const allClasses = _.merge(defaultClasses(), customClassesMethod());
     if (withLogs) {
         console.log('klazify', 'available classes ->\n', _.keys(allClasses).join(','));
     }

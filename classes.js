@@ -6,7 +6,7 @@ import Color from 'color';
  * @link https://github.com/vitalets/react-native-extended-stylesheet
  */
 
-const defaultClasses = {
+const defaultClasses = () => ({
 
     // Accordion
     'accordion-body': {},
@@ -1738,6 +1738,6 @@ const defaultClasses = {
      * TODO: replace scaleY with transform
      */
     // 'invert': {scaleY: -1},
-};
+});
 
 export default defaultClasses;
