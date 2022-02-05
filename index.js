@@ -1200,10 +1200,6 @@ const defaultClasses = {
     'text-lg': {fontSize: '1.4rem'},
     'text-xl': {fontSize: '2rem'},
     // 'text-primary': {color: Colors.blue},
-    // 'text-ezkommerce-primary': {color: Colors.ezkommercePrimary},
-    // 'text-ezkommerce-accent': {color: Colors.ezkommerceAccent},
-    // 'text-ezk-primary': {color: Colors.ezkommercePrimary},
-    // 'text-ezk-accent': {color: Colors.ezkommerceAccent},
 
     'text-title': {fontSize: '1.4rem'},
     'text-subtitle': {fontSize: '1.2rem'},
@@ -1266,9 +1262,6 @@ const defaultClasses = {
     // 'bg-warn-light': {backgroundColor: Colors.opacity.warn(0.16)},
     // 'bg-primary': {backgroundColor: Colors.blue},
     // 'bg-success': {backgroundColor: Colors.green},
-    // 'bg-ezk-primary': {backgroundColor: Colors.ezkommercePrimary},
-    // 'bg-ezk-accent': {backgroundColor: Colors.ezkommerceAccent},
-    // 'bg-ezk': {backgroundColor: Colors.ezkommerceAccent},
 
     // 'bg-red': {backgroundColor: Colors.red},
     // 'bg-danger': {backgroundColor: Colors.red},
@@ -1626,8 +1619,6 @@ const defaultClasses = {
     // 'b-orange-alt': {borderColor: Colors.orange},
     // 'b-danger': {borderColor: Colors.red},
     // 'b-success': {borderColor: Colors.green},
-    // 'b-ezk': {borderColor: Colors.ezkommerceAccent},
-    // 'b-ezkommerce-accent': {borderColor: Colors.ezkommerceAccent},
     'badge-sm': {
         // backgroundColor: Colors.blue,
         padding: '0.25rem',
@@ -1698,10 +1689,6 @@ const defaultClasses = {
     // 'bx-6': {borderBottomWidth: 6, borderColor: Colors.gray2},
     // 'by-6': {borderBottomWidth: 6, borderColor: Colors.gray2},
 
-    'ezk-button': {
-        position: 'absolute',
-        zIndex: 9999,
-    },
     'z-index-max': {
         position: 'absolute',
         zIndex: 9999,
