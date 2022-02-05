@@ -1730,7 +1730,10 @@ const defaultClasses = {
         width: '100%',
     },
 
-    'invert': {scaleY: -1},
+    /**
+     * TODO: replace scaleY with transform
+     */
+    // 'invert': {scaleY: -1},
 };
 
 let classes;
