@@ -1601,7 +1601,7 @@ const defaultClasses = () => ({
     'text-roboto-medium': {fontFamily: 'Roboto_500Medium'},
     'text-roboto-bold': {fontFamily: 'Roboto_700Bold'},
     'text-bold': {fontFamily: 'Roboto_700Bold'},
-    'text-disabled': {color: "$text-light-50"},
+    'text-disabled': {color: Color(EStyleSheet.value('$textLight')).lighten(0.5).hex()},
     'text-link': {textDecorationLine: 'underline'},
     'text-align-left': {textAlign: 'left'},
     'text-align-right': {textAlign: 'right'},
