@@ -114,4 +114,4 @@ const css = (styles) => {
     }
 };
 
-export {css, init};
+export {css, init, EStyleSheet};
