@@ -56,13 +56,16 @@ const init = (opts = {
         black: '#000',
         text: '#000',
         textLight: '#FFF',
+
+        btnPaddingHorizontal: '1rem',
+        btnPaddingVertical: '0.75rem',
     };
     const colors = _.merge(defaultColors, _.get(opts, 'theme'));
     if (withLogs) {
         console.log('klazify', 'colors', colors);
     }
     const defaultGlobalVars = {
-        $rem: 8,
+        $rem: 12,
         $blue: _.get(colors, 'blue'),
         $indigo: _.get(colors, 'indigo'),
         $purple: _.get(colors, 'purple'),
@@ -92,6 +95,8 @@ const init = (opts = {
         $black: _.get(colors, 'black'),
         $text: _.get(colors, 'text'),
         $textLight: _.get(colors, 'textLight'),
+        $btnPaddingHorizontal: _.get(colors, 'btnPaddingHorizontal'),
+        $btnPaddingVertical: _.get(colors, 'btnPaddingVertical'),
     };
     /**
      * extraGlobalVars will override existing vars in defaultGlobalVars if some var name is exactly equal.
