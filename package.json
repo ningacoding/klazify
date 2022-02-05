@@ -1,9 +1,13 @@
 {
   "name": "klazify",
-  "version": "0.0.0-beta5",
+  "version": "0.0.0-beta5b",
   "description": "Fast, Reusable, React Native stylesheets classes.",
   "main": "index.js",
   "scripts": {},
+  "repository": {
+    "directory": "https://github.com/ningacoding/klazify",
+    "type": "git"
+  },
   "keywords": [
     "react-native",
     "css",
