@@ -43,6 +43,7 @@ declare module 'klazify' {
     },
     extraGlobalVars?: EStyleSheet.AnyObject,
     customClasses?: EStyleSheet.AnyObject,
+    logs?: boolean,
   });
   
   /**

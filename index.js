@@ -13,6 +13,7 @@ const init = (opts = {
     theme: undefined,
     extraGlobalVars: undefined,
     customClasses: undefined,
+    logs: false,
 }) => {
 
     // --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -53,6 +54,9 @@ const init = (opts = {
         'text-light-50': 'rgba(255,255,255,0.5)',
     };
     const colors = _.merge(defaultColors, _.get(opts, 'theme'));
+    if (_.get(opts, 'logs')) {
+        console.log('klazify', 'colors', colors);
+    }
     const defaultGlobalVars = {
         $rem: 8,
         $blue: _.get(colors, 'blue'),
@@ -92,8 +96,15 @@ const init = (opts = {
      * @type {any}
      */
     const rawGlobalVars = _.merge(defaultGlobalVars, _.get(opts, 'extraGlobalVars'));
+    if (_.get(opts, 'logs')) {
+        console.log('klazify', 'rawGlobalVars', rawGlobalVars);
+    }
     EStyleSheet.build(rawGlobalVars);
-    classes = EStyleSheet.create(_.merge(defaultClasses, _.get(opts, 'customClasses')));
+    const allClasses = _.merge(defaultClasses, _.get(opts, 'customClasses'));
+    if (_.get(opts, 'logs')) {
+        console.log('klazify', 'classes', _.keys(allClasses).join(','));
+    }
+    classes = EStyleSheet.create(allClasses);
 };
 
 /**
