@@ -3,6 +3,7 @@ import _ from 'lodash';
 import defaultClasses from './classes';
 
 let classes;
+let withLogs;
 
 /**
  * This method must be run before css() method.
@@ -19,6 +20,8 @@ const init = (opts = {
     // --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     // --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     // --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+
+    withLogs = _.get(opts, 'logs');
 
     const defaultColors = {
         blue: '#0d6efd',
@@ -54,7 +57,7 @@ const init = (opts = {
         'text-light-50': 'rgba(255,255,255,0.5)',
     };
     const colors = _.merge(defaultColors, _.get(opts, 'theme'));
-    if (_.get(opts, 'logs')) {
+    if (withLogs) {
         console.log('klazify', 'colors', colors);
     }
     const defaultGlobalVars = {
@@ -96,12 +99,12 @@ const init = (opts = {
      * @type {any}
      */
     const rawGlobalVars = _.merge(defaultGlobalVars, _.get(opts, 'extraGlobalVars'));
-    if (_.get(opts, 'logs')) {
+    if (withLogs) {
         console.log('klazify', 'rawGlobalVars', rawGlobalVars);
     }
     EStyleSheet.build(rawGlobalVars);
     const allClasses = _.merge(defaultClasses, _.get(opts, 'customClasses'));
-    if (_.get(opts, 'logs')) {
+    if (withLogs) {
         console.log('klazify', 'classes', _.keys(allClasses).join(','));
     }
     classes = EStyleSheet.create(allClasses);
@@ -118,6 +121,9 @@ const init = (opts = {
 const css = (styles) => {
     if (typeof styles === 'string') {
         const picked = _.pick(classes, styles.split(' '));
+        if (withLogs) {
+            console.log('klazify', 'styles', styles, picked);
+        }
         return _.keys(picked).reduce((update, previous) => ({...update, ...picked[previous]}), {});
     }
     if (typeof styles === 'object') {
