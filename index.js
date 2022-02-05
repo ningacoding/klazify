@@ -105,7 +105,7 @@ const init = (opts = {
     EStyleSheet.build(rawGlobalVars);
     const allClasses = _.merge(defaultClasses, _.get(opts, 'customClasses'));
     if (withLogs) {
-        console.log('klazify', 'classes', _.keys(allClasses).join(','));
+        console.log('klazify', 'available classes ->\n', _.keys(allClasses).join(','));
     }
     classes = EStyleSheet.create(allClasses);
 };
@@ -122,7 +122,7 @@ const css = (styles) => {
     if (typeof styles === 'string') {
         const picked = _.pick(classes, styles.split(' '));
         if (withLogs) {
-            console.log('klazify', 'styles', styles, picked);
+            console.log('klazify', 'classes input -> ', styles, 'styles ->\n', picked);
         }
         return _.keys(picked).reduce((update, previous) => ({...update, ...picked[previous]}), {});
     }
