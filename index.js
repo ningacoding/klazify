@@ -27,7 +27,7 @@ const init = (opts = {
     withLogs = _.get(opts, 'logs');
 
     const defaultTheme = {
-        defaultFontFamily: undefined,
+        defaultFontFamily: '',
 
         blue: '#0d6efd',
         indigo: '#6610f2',
