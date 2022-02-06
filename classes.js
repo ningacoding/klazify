@@ -890,23 +890,48 @@ const defaultClasses = () => ({
 
     // Grid
     'col': {
+        flex: 1,
         flexDirection: 'column',
     },
-    'col-*': {},
-    'col-# (<576px)': {},
-    'col-1': {},
-    'col-10': {},
-    'col-11': {},
-    'col-12': {},
-    'col-2': {},
-    'col-3': {},
-    'col-4': {},
-    'col-5': {},
-    'col-6': {},
-    'col-7': {},
-    'col-8': {},
-    'col-9': {},
-    'col-auto': {},
+    'col-auto': {
+        flexDirection: 'column',
+    },
+    'col-1': {
+        flex: 1,
+    },
+    'col-10': {
+        flex: 10,
+    },
+    'col-11': {
+        flex: 11,
+    },
+    'col-12': {
+        flex: 12,
+    },
+    'col-2': {
+        flex: 2,
+    },
+    'col-3': {
+        flex: 3,
+    },
+    'col-4': {
+        flex: 4,
+    },
+    'col-5': {
+        flex: 5,
+    },
+    'col-6': {
+        flex: 6,
+    },
+    'col-7': {
+        flex: 7,
+    },
+    'col-8': {
+        flex: 8,
+    },
+    'col-9': {
+        flex: 9,
+    },
     'col-lg-# (≥992px)': {},
     'col-lg-1': {},
     'col-md-# (≥768px)': {},
