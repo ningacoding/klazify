@@ -738,6 +738,28 @@ const defaultClasses = () => ({
     'figure-img': {},
 
     // Flexbox
+    'justify-content-between': {
+        justifyContent: 'space-between',
+    },
+    'align-items-start': {
+        justifyContent: 'flex-start',
+    },
+    'align-items-end': {
+        justifyContent: 'flex-end',
+    },
+    'align-items-center': {
+        justifyContent: 'center',
+        alignItems: 'stretch',
+    },
+    'align-self-start': {
+        alignSelf: 'flex-start',
+    },
+    'align-self-center': {
+        alignSelf: 'center',
+    },
+    'align-self-end': {
+        alignSelf: 'flex-end',
+    },
     'align-content-*-around': {},
     'align-content-*-center': {},
     'align-content-*-end': {},
@@ -787,7 +809,6 @@ const defaultClasses = () => ({
     'justify-content-*-end': {},
     'justify-content-*-start': {},
     'justify-content-around': {},
-    'justify-content-between': {},
     'justify-content-center': {
         justifyContent: 'center',
     },
@@ -2049,12 +2070,8 @@ const defaultClasses = () => ({
     'avatar-navbar': {
         marginVertical: '-0.5rem',
     },
-    'align-self-center': {alignSelf: 'center'},
-    'align-items-center': {alignItems: 'center'},
-
     'center': {
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignSelf: 'center',
     },
     'b-red': {borderColor: '$danger'},
     'b-transparent': {borderColor: 'transparent'},
