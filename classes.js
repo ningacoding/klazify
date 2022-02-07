@@ -1076,6 +1076,7 @@ const defaultClasses = () => ({
     'overflow-visible': {},
     'pe-auto': {},
     'pe-none': {},
+
     'shadow': {
         shadowOpacity: 0.16,
         shadowRadius: 4,
@@ -1085,9 +1086,42 @@ const defaultClasses = () => ({
         },
         elevation: 4,
     },
-    'shadow-lg': {},
-    'shadow-none': {},
-    'shadow-sm': {},
+    'shadow-sm': {
+        shadowOpacity: 0.16,
+        shadowRadius: 2,
+        shadowOffset: {
+            height: 2,
+            width: 0,
+        },
+        elevation: 2,
+    },
+    'shadow-md': {
+        shadowOpacity: 0.16,
+        shadowRadius: 6,
+        shadowOffset: {
+            height: 6,
+            width: 0,
+        },
+        elevation: 6,
+    },
+    'shadow-lg': {
+        shadowOpacity: 0.16,
+        shadowRadius: 8,
+        shadowOffset: {
+            height: 8,
+            width: 0,
+        },
+        elevation: 8,
+    },
+    'shadow-none': {
+        shadowOpacity: 0,
+        shadowRadius: 0,
+        shadowOffset: {
+            height: 0,
+            width: 0,
+        },
+        elevation: 0,
+    },
     'sr-only': {},
     'sr-only-focusable': {},
     'visible': {},
