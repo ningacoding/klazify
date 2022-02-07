@@ -1055,6 +1055,29 @@ const defaultClasses = () => ({
 
     // Form Input Groups
     'checkbox': {},
+    'input-active': {
+        borderWidth: 1,
+        borderColor: '$primary',
+    },
+    'input-error': {
+        borderWidth: 1,
+        borderColor: '$danger',
+    },
+    'input': {
+        borderWidth: 1,
+        borderColor: '$gray2',
+        paddingHorizontal: "1rem",
+        paddingVertical: "0.75rem",
+        margin: 0,
+    },
+    'text-area': {
+        borderWidth: 1,
+        borderColor: '$gray2',
+        paddingHorizontal: "1rem",
+        paddingVertical: "0.75rem",
+        margin: 0,
+        maxHeight: 100,
+    },
     'input-group': {},
     'input-group-append': {},
     'input-group-lg': {},
