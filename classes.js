@@ -655,7 +655,7 @@ const defaultClasses = () => ({
     'bg-dark': {backgroundColor: '$dark'},
     'bg-black': {backgroundColor: '$black'},
 
-    'bg-body': {},
+    'bg-body': {backgroundColor: '$bgBody'},
     'bg-gradient': {},
 
     'link-danger': {},

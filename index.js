@@ -56,8 +56,10 @@ const init = (opts = {
         light: '#f8f9fa',
         dark: '#212529',
         black: '#000',
+
         text: '#000',
         textLight: '#FFF',
+        bgBody: '#f8f9fa',
 
         btnPaddingHorizontal: '1rem',
         btnPaddingVertical: '0.75rem',
@@ -98,6 +100,7 @@ const init = (opts = {
         $black: _.get(colors, 'black'),
         $text: _.get(colors, 'text'),
         $textLight: _.get(colors, 'textLight'),
+        $bgBody: _.get(colors, 'bgBody'),
         $btnPaddingHorizontal: _.get(colors, 'btnPaddingHorizontal'),
         $btnPaddingVertical: _.get(colors, 'btnPaddingVertical'),
     };
