@@ -18,17 +18,196 @@ const defaultClasses = () => ({
     'collapsed': {},
 
     // Alerts
-    'alert-danger': {},
-    'alert-dark': {},
-    'alert-dismissible': {},
-    'alert-heading': {},
-    'alert-info': {},
-    'alert-light': {},
-    'alert-link': {},
-    'alert-primary': {},
-    'alert-secondary': {},
-    'alert-success': {},
-    'alert-warning': {},
+
+    'text-alert-blue': {
+        color: Color(EStyleSheet.value('$blue')).darken(0.48).hex(),
+    },
+    'alert-blue': {
+        backgroundColor: Color(EStyleSheet.value('$blue')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$blue')).lighten(0.7).hex(),
+    },
+
+    'text-alert-indigo': {
+        color: Color(EStyleSheet.value('$indigo')).darken(0.48).hex(),
+    },
+    'alert-indigo': {
+        backgroundColor: Color(EStyleSheet.value('$indigo')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$indigo')).lighten(0.7).hex(),
+    },
+
+    'text-alert-purple': {
+        color: Color(EStyleSheet.value('$purple')).darken(0.48).hex(),
+    },
+    'alert-purple': {
+        backgroundColor: Color(EStyleSheet.value('$purple')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$purple')).lighten(0.7).hex(),
+    },
+
+    'text-alert-pink': {
+        color: Color(EStyleSheet.value('$pink')).darken(0.48).hex(),
+    },
+    'alert-pink': {
+        backgroundColor: Color(EStyleSheet.value('$pink')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$pink')).lighten(0.7).hex(),
+    },
+
+    'text-alert-red': {
+        color: Color(EStyleSheet.value('$red')).darken(0.48).hex(),
+    },
+    'alert-red': {
+        backgroundColor: Color(EStyleSheet.value('$red')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$red')).lighten(0.7).hex(),
+    },
+
+    'text-alert-orange': {
+        color: Color(EStyleSheet.value('$orange')).darken(0.48).hex(),
+    },
+    'alert-orange': {
+        backgroundColor: Color(EStyleSheet.value('$orange')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$orange')).lighten(0.7).hex(),
+    },
+
+    'text-alert-yellow': {
+        color: Color(EStyleSheet.value('$yellow')).darken(0.48).hex(),
+    },
+    'alert-yellow': {
+        backgroundColor: Color(EStyleSheet.value('$yellow')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$yellow')).lighten(0.7).hex(),
+    },
+
+    'text-alert-green': {
+        color: Color(EStyleSheet.value('$green')).darken(0.48).hex(),
+    },
+    'alert-green': {
+        backgroundColor: Color(EStyleSheet.value('$green')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$green')).lighten(0.7).hex(),
+    },
+
+    'text-alert-teal': {
+        color: Color(EStyleSheet.value('$teal')).darken(0.48).hex(),
+    },
+    'alert-teal': {
+        backgroundColor: Color(EStyleSheet.value('$teal')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$teal')).lighten(0.7).hex(),
+    },
+
+    'text-alert-cyan': {
+        color: Color(EStyleSheet.value('$cyan')).darken(0.48).hex(),
+    },
+    'alert-cyan': {
+        backgroundColor: Color(EStyleSheet.value('$cyan')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$cyan')).lighten(0.7).hex(),
+    },
+
+    'text-alert-gray': {
+        color: Color(EStyleSheet.value('$gray')).darken(0.48).hex(),
+    },
+    'alert-gray': {
+        backgroundColor: Color(EStyleSheet.value('$gray')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$gray')).lighten(0.7).hex(),
+    },
+
+    'text-alert-gray-dark': {
+        color: Color(EStyleSheet.value('$grayDark')).darken(0.48).hex(),
+    },
+    'alert-gray-dark': {
+        backgroundColor: Color(EStyleSheet.value('$grayDark')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$grayDark')).lighten(0.7).hex(),
+    },
+
+    'text-alert-primary': {
+        color: Color(EStyleSheet.value('$primary')).darken(0.48).hex(),
+    },
+    'alert-primary': {
+        backgroundColor: Color(EStyleSheet.value('$primary')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$primary')).lighten(0.7).hex(),
+    },
+
+    'text-alert-secondary': {
+        color: Color(EStyleSheet.value('$secondary')).darken(0.48).hex(),
+    },
+    'alert-secondary': {
+        backgroundColor: Color(EStyleSheet.value('$secondary')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$secondary')).lighten(0.7).hex(),
+    },
+
+    'text-alert-success': {
+        color: Color(EStyleSheet.value('$success')).darken(0.48).hex(),
+    },
+    'alert-success': {
+        backgroundColor: Color(EStyleSheet.value('$success')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$success')).lighten(0.7).hex(),
+    },
+
+    'text-alert-info': {
+        color: Color(EStyleSheet.value('$info')).darken(0.48).hex(),
+    },
+    'alert-info': {
+        backgroundColor: Color(EStyleSheet.value('$info')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$info')).lighten(0.7).hex(),
+    },
+
+    'text-alert-warning': {
+        color: Color(EStyleSheet.value('$warning')).darken(0.48).hex(),
+    },
+    'alert-warning': {
+        backgroundColor: Color(EStyleSheet.value('$warning')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$warning')).lighten(0.7).hex(),
+    },
+
+    'text-alert-danger': {
+        color: Color(EStyleSheet.value('$danger')).darken(0.48).hex(),
+    },
+    'alert-danger': {
+        backgroundColor: Color(EStyleSheet.value('$danger')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$danger')).lighten(0.7).hex(),
+    },
+
+    'text-alert-light': {
+        color: Color(EStyleSheet.value('$light')).darken(0.48).hex(),
+    },
+    'alert-light': {
+        backgroundColor: Color(EStyleSheet.value('$light')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$light')).lighten(0.7).hex(),
+    },
+
+    'text-alert-dark': {
+        color: Color(EStyleSheet.value('$dark')).darken(0.48).hex(),
+    },
+    'alert-dark': {
+        backgroundColor: Color(EStyleSheet.value('$dark')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$dark')).lighten(0.7).hex(),
+    },
+
+    'text-alert-black': {
+        color: "$white",
+    },
+    'alert-black': {
+        backgroundColor: Color(EStyleSheet.value('$black')).lighten(0.8).hex(),
+        borderWidth: 1,
+        borderColor: Color(EStyleSheet.value('$black')).lighten(0.7).hex(),
+    },
+
     'fade': {},
 
     // Badges
