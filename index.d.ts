@@ -10,6 +10,7 @@ declare module 'klazify' {
   function init(opts?: {
     theme?: {
       defaultFontFamily?: string,
+      
       blue?: string,
       indigo?: string,
       purple?: string,
@@ -21,12 +22,12 @@ declare module 'klazify' {
       teal?: string,
       cyan?: string,
       gray?: string,
-      'gray1'?: string,
-      'gray2'?: string,
-      'gray3'?: string,
-      'gray4'?: string,
-      'gray5'?: string,
-      'gray-dark'?: string,
+      gray1?: string,
+      gray2?: string,
+      gray3?: string,
+      gray4?: string,
+      gray5?: string,
+      grayDark?: string,
       primary?: string,
       secondary?: string,
       success?: string,
@@ -37,8 +38,11 @@ declare module 'klazify' {
       light?: string,
       dark?: string,
       black?: string,
+      
       text?: string,
-      'text-light'?: string,
+      textLight?: string,
+      bgBody?: string,
+      
       btnPaddingHorizontal?: string | number,
       btnPaddingVertical?: string | number,
     },

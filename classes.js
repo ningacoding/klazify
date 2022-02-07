@@ -2117,7 +2117,8 @@ const defaultClasses = () => ({
         marginVertical: '-0.5rem',
     },
     'center': {
-        alignSelf: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     'b-transparent': {borderColor: 'transparent'},
     'b-blue': {borderColor: '$blue'},
