@@ -638,12 +638,12 @@ const defaultClasses = () => ({
     'bg-teal': {backgroundColor: '$teal'},
     'bg-cyan': {backgroundColor: '$cyan'},
     'bg-gray': {backgroundColor: '$gray'},
-    'bg-gray1': {backgroundColor: '$gray1'},
-    'bg-gray2': {backgroundColor: '$gray2'},
-    'bg-gray3': {backgroundColor: '$gray3'},
-    'bg-gray4': {backgroundColor: '$gray4'},
-    'bg-gray5': {backgroundColor: '$gray5'},
-    'bg-grayDark': {backgroundColor: '$grayDark'},
+    'bg-gray-1': {backgroundColor: '$gray1'},
+    'bg-gray-2': {backgroundColor: '$gray2'},
+    'bg-gray-3': {backgroundColor: '$gray3'},
+    'bg-gray-4': {backgroundColor: '$gray4'},
+    'bg-gray-5': {backgroundColor: '$gray5'},
+    'bg-gray-dark': {backgroundColor: '$grayDark'},
     'bg-primary': {backgroundColor: '$primary'},
     'bg-secondary': {backgroundColor: '$secondary'},
     'bg-success': {backgroundColor: '$success'},
@@ -654,14 +654,6 @@ const defaultClasses = () => ({
     'bg-light': {backgroundColor: '$light'},
     'bg-dark': {backgroundColor: '$dark'},
     'bg-black': {backgroundColor: '$black'},
-    'bg-text': {backgroundColor: '$text'},
-    'bg-textLight': {backgroundColor: '$textLight'},
-
-    'bg-gray-1': {backgroundColor: '$gray1'},
-    'bg-gray-2': {backgroundColor: '$gray2'},
-    'bg-gray-3': {backgroundColor: '$gray3'},
-    'bg-gray-4': {backgroundColor: '$gray4'},
-    'bg-gray-5': {backgroundColor: '$gray5'},
 
     'bg-body': {},
     'bg-gradient': {},
@@ -1728,21 +1720,25 @@ const defaultClasses = () => ({
     },
     'inline': {alignSelf: 'flex-start'},
     'align-right': {alignSelf: 'flex-end'},
-    /**
-     * Available Fonts:
-     * Roboto_100Thin
-     * Roboto_400Regular
-     * Roboto_500Medium
-     * Roboto_700Bold
-     * Roboto_900Black
-     */
+
     /**
      * Text section
      */
-    'text-sm': {fontSize: '0.75rem', fontWeight: '500'},
-    'text-md': {fontSize: '1.2rem', fontWeight: '500'},
-    'text-lg': {fontSize: '1.4rem'},
-    'text-xl': {fontSize: '2rem'},
+    'text-sm': {
+        fontSize: '0.75rem',
+    },
+    'text-md': {
+        fontSize: '1.5rem',
+    },
+    'text-lg': {
+        fontSize: '2rem',
+    },
+    'text-xl': {
+        fontSize: '2.5rem',
+    },
+    'text-xxl': {
+        fontSize: '3rem',
+    },
 
     'text-title': {fontSize: '1.4rem'},
     'text-subtitle': {fontSize: '1.2rem'},
@@ -2117,8 +2113,7 @@ const defaultClasses = () => ({
     'b-light': {borderColor: '$light'},
     'b-dark': {borderColor: '$dark'},
     'b-black': {borderColor: '$black'},
-    'b-text': {borderColor: '$text'},
-    'b-textLight': {borderColor: '$textLight'},
+
     'badge-sm': {
         backgroundColor: '$primary',
         padding: '0.25rem',
