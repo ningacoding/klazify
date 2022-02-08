@@ -266,6 +266,22 @@ export default function TabsExample() {
 
 ## Forms
 
+```javascript
+import {css, color} from 'klazify';
+...
+const [isActive1, setIsActive1] = useState(false);
+...
+<Text style={css('text pb-half')}>
+       {'Basic Input:'}
+</Text>
+<TextInput style={css(`input text rounded-3 bg-panel ${isActive1 ? 'input-active' : ''}`)}
+    numberOfLines={1}
+    placeholder={'Type here...'}
+    placeholderTextColor={color('$gray').hex()}
+    onFocus={() => setIsActive1(true)}
+    onBlur={() => setIsActive1(false)}/>
+```
+
 ![image](https://user-images.githubusercontent.com/17342546/153070246-742bb289-9de0-4157-9053-18ebce93853c.png)
 
 ## Borders, Margin and Padding
