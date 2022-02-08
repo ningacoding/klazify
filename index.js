@@ -109,24 +109,24 @@ const init = (opts = {
         $btnPaddingHorizontal: _get(colors, 'btnPaddingHorizontal'),
         $btnPaddingVertical: _get(colors, 'btnPaddingVertical'),
     };
-    EStyleSheet.build();
-    const customClassesMethod = _get(opts, 'customClasses');
-    if (typeof customClassesMethod !== 'function') {
-        throw new Error('customClasses must be a method / function.');
-    }
     /**
      * extraGlobalVars will override existing vars in defaultGlobalVars if some var name is exactly equal.
      * @type {any}
      */
     const rawGlobalVars = _merge(defaultGlobalVars, _get(opts, 'extraGlobalVars'));
-    const allClasses = _merge(defaultClasses(), customClassesMethod());
-    const stylez = Object.assign({}, rawGlobalVars, allClasses);
     if (withLogs) {
         console.log('klazify', 'rawGlobalVars', rawGlobalVars);
-        console.log('klazify', 'available classes ->\n', _keys(allClasses).join(','));
-        console.log('klazify', 'stylez ->\n', _keys(allClasses).join(','));
     }
-    classes = EStyleSheet.create(stylez);
+    EStyleSheet.build(rawGlobalVars);
+    const customClassesMethod = _get(opts, 'customClasses');
+    if (typeof customClassesMethod !== 'function') {
+        throw new Error('customClasses must be a method / function.');
+    }
+    const allClasses = _merge(defaultClasses(), customClassesMethod());
+    if (withLogs) {
+        console.log('klazify', 'available classes ->\n', _keys(allClasses).join(','));
+    }
+    classes = EStyleSheet.create(allClasses);
 };
 
 /**
