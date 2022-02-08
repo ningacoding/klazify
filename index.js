@@ -120,11 +120,13 @@ const init = (opts = {
      */
     const rawGlobalVars = _merge(defaultGlobalVars, _get(opts, 'extraGlobalVars'));
     const allClasses = _merge(defaultClasses(), customClassesMethod());
+    const stylez = Object.assign({}, rawGlobalVars, allClasses);
     if (withLogs) {
         console.log('klazify', 'rawGlobalVars', rawGlobalVars);
         console.log('klazify', 'available classes ->\n', _keys(allClasses).join(','));
+        console.log('klazify', 'stylez ->\n', _keys(allClasses).join(','));
     }
-    classes = EStyleSheet.create(Object.assign({}, rawGlobalVars, allClasses));
+    classes = EStyleSheet.create(stylez);
 };
 
 /**
