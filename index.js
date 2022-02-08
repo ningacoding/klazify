@@ -76,6 +76,7 @@ const init = (opts = {
     }
     const defaultGlobalVars = {
         $rem: 12,
+        $theme: _get(colors, 'theme'),
         $defaultFontFamily: _get(colors, 'defaultFontFamily'),
         $blue: _get(colors, 'blue'),
         $indigo: _get(colors, 'indigo'),
@@ -119,9 +120,10 @@ const init = (opts = {
         console.log('klazify', 'rawGlobalVars', rawGlobalVars);
     }
     EStyleSheet.build(rawGlobalVars);
-    const customClassesMethod = _get(opts, 'customClasses');
+    let customClassesMethod = _get(opts, 'customClasses');
     if (!!customClassesMethod && typeof customClassesMethod !== 'function') {
-        throw new Error('customClasses must be a method / function.');
+        console.log('customClasses must be a method / function. (ignoring values).')
+        customClassesMethod = () => ({});
     }
     const allClasses = _merge(defaultClasses(), customClassesMethod());
     if (withLogs) {
