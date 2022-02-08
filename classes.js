@@ -1,5 +1,5 @@
-import {EStyleSheet} from 'klazify';
 import Color from 'color';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 /**
  * More info about extended stylesheet visit:
@@ -200,7 +200,7 @@ const defaultClasses = () => ({
     },
 
     'text-alert-black': {
-        color: "$white",
+        color: '$white',
     },
     'alert-black': {
         backgroundColor: Color(EStyleSheet.value('$black')).lighten(0.8).hex(),
@@ -1066,15 +1066,15 @@ const defaultClasses = () => ({
     'input': {
         borderWidth: 1,
         borderColor: '$gray2',
-        paddingHorizontal: "1rem",
-        paddingVertical: "0.75rem",
+        paddingHorizontal: '1rem',
+        paddingVertical: '0.75rem',
         margin: 0,
     },
     'text-area': {
         borderWidth: 1,
         borderColor: '$gray2',
-        paddingHorizontal: "1rem",
-        paddingVertical: "0.75rem",
+        paddingHorizontal: '1rem',
+        paddingVertical: '0.75rem',
         margin: 0,
         maxHeight: 100,
     },
