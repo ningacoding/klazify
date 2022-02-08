@@ -124,7 +124,7 @@ https://github.com/ningacoding/klazify-examples
 
 Or open Expo Go Client for Android or Cam app for ios and scan this code:
 
-![image](https://user-images.githubusercontent.com/17342546/153075276-b083fb82-6c3d-4bc9-9a35-1bdb6e98563a.png)
+![frame](https://user-images.githubusercontent.com/17342546/153075923-6fa0c7e3-2fb2-4012-8f3d-95e82ea44966.png)
 
 ## Theming
 
@@ -143,7 +143,7 @@ Source code example:
 import {css} from 'klazify';
 
 export default function Btn() {
- return <TouchableOpacity style={css('btn-primary'} 
+ return <TouchableOpacity style={css('btn-primary rounded-5'} 
                           onPress={()=>alert('Pressed!')}>
     <Text style={css("text text-white")}>
       {"PRESS ME"}
@@ -162,7 +162,7 @@ Source code example:
 import {css} from 'klazify';
 
 export default function Btn() {
- return <TouchableOpacity style={css('btn-outline-primary'} 
+ return <TouchableOpacity style={css('btn-outline-primary rounded-5'} 
                           onPress={()=>alert('Pressed!')}>
     <Text style={css("text text-primary")}>
       {"PRESS ME"}
@@ -179,9 +179,38 @@ export default function Btn() {
 
 ## Typography
 
+```javascript 
+import {css} from 'klazify';
+
+export default function Title() {
+ return <Text style={css("text h1")}>
+      {"Awesme Title"}
+    </Text>;
+}
+```
+
 ![image](https://user-images.githubusercontent.com/17342546/153061793-7f220f42-2920-4984-8dc7-cd6cda6bc5ab.png)
 
 ## Grid
+
+```javascript 
+import {css} from 'klazify';
+
+export default function GridExample() {
+ return <View style={css('row')}>
+            <View style={css('col')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column'}
+                </Text>
+            </View>
+            <View style={css('col')}>
+                <Text style={css('text text-center p-1')}>
+                    {'Column'}
+                </Text>
+            </View>
+        </View>;
+}
+```
 
 ![image](https://user-images.githubusercontent.com/17342546/153061829-dcd6b9b1-2fa5-4b62-957b-be28fe8994eb.png)
 
@@ -190,6 +219,35 @@ export default function Btn() {
 ![image](https://user-images.githubusercontent.com/17342546/153061869-6625cb8d-5cb8-4d3c-8d65-5e0c227f878f.png)
 
 ## Tabs
+
+```javascript 
+import {css} from 'klazify';
+// just in case you want icons, you can choose your favorite icon set.
+import {MaterialCommunityIcons} from '@expo/vector-icons';
+
+export default function TabsExample() {
+ return <View style={css('bb-1 row')}>
+            <View style={css('rounded-t-3 bx-1 bt-1 tab tab-active bg-panel mx-half')}>
+                <Text style={css('text p-1')}>
+                    {'Active'}
+                </Text>
+            </View>
+            <View style={css('rounded-t-3 bx-1 bt-1 tab tab-inactive bg-panel-50 mx-half')}>
+                <Text style={css('text text-gray-4 p-1')}>
+                    {'Inactive'}
+                </Text>
+            </View>
+            <View style={css('rounded-t-3 bx-1 bt-1 tab tab-inactive bg-panel-50 mx-half disabled')}>
+                <Text style={css('text text-gray-4 p-1')}>
+                    {'Disabled'}
+                </Text>
+            </View>
+            <View style={css('rounded-t-3 bx-1 bt-1 p-1 tab tab-inactive bg-panel-50 mx-half text')}>
+                <MaterialCommunityIcons name={'plus'} style={css('icon text-gray-3')}/>
+            </View>
+        </View>;
+}
+```
 
 ![image](https://user-images.githubusercontent.com/17342546/153061901-08464c8a-56cf-4332-b67b-e59bd0e55518.png)
 
