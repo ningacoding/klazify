@@ -11,6 +11,7 @@ Klazify loads all the Style Sheets from classes at the App startup and never mor
 - [Klazify](#klazify-v10)
   - [Install](#install)
   - [Usage](#usage)
+    - [List of classes](#list-of-classes)
   - [Examples](#examples)
   - [Theming](#theming)
 - [Building Components made easy](#building-components-made-easy)
@@ -83,7 +84,10 @@ export default function AwesomeView() {
 }
 ```
 
+### List of classes
+Please see all [available classes](https://github.com/ningacoding/klazify/blob/main/available.classes.js)
 
+## Save time and lines
 
 Success!! You have saved time and lines, your code is readable and you didn't write the below code:
 
