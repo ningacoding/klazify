@@ -77,7 +77,7 @@ import {css} from 'klazify';
 export default function AwesomeView() {
  return <View style={css('p-1 bg-primary flex center'}>
     <Text style={css("text text-white")}>
-      {"That's it! Klazify have loaded."}
+      {"Awesome View built with Klazify."}
     </Text>
   <View/>;
 }
@@ -93,12 +93,13 @@ import {StyleSheets} from 'react-native';
 export default function NotAwesomeView() {
  return <View style={styles.container}>
     <Text style={styles.text}>
-      {"That's it! Klazify have loaded."}
+      {"The same View but with more code ☹️"}
     </Text>
   <View/>;
 }
 
 // YOU SAVED CODE AND TIME:
+// Note: every .create({}) uses app memory
 const styles = StyleSheets.create({
   container: {
     padding: 8, // static values ☹️ instead of consistent and scalable values
