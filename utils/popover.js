@@ -34,7 +34,7 @@ function Popover({children, content, inline, style}, ref) {
         </TouchableOpacity>
         <View style={css('position-absolute top-0 left-0')}>
             <Menu ref={menuRef}
-                  style={[css('rounded-5 bg-panel'), css({width: buttonWidth}), style]}>
+                  style={[css('rounded-5 bg-popover'), css({width: buttonWidth}), style]}>
                 {content}
             </Menu>
         </View>

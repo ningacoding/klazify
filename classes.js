@@ -917,6 +917,7 @@ const defaultClasses = () => ({
     'bg-black': {backgroundColor: '$black'},
 
     'bg-body': {backgroundColor: '$bgBody'},
+    'bg-popover': {backgroundColor: Color(EStyleSheet.value('$bgBody')).lighten(0.75).hex()},
     'bg-panel': {backgroundColor: Color(EStyleSheet.value('$bgBody')).lighten(0.4).hex()},
     'bg-panel-50': {backgroundColor: Color(EStyleSheet.value('$bgBody')).lighten(0.2).hex()},
     'bg-gradient': {},
