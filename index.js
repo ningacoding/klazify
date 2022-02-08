@@ -1,6 +1,8 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 import _ from 'lodash';
 import defaultClasses from './classes';
+import Popover from './utils/popover';
+import Color from 'color';
 
 let classes;
 let withLogs;
@@ -144,5 +146,6 @@ const css = (styles) => {
         return EStyleSheet.create({target: styles}).target;
     }
 };
+const color = (variableName) => Color(EStyleSheet.value(variableName));
 
-export {css, init, EStyleSheet};
+export {css, init, color, Popover};

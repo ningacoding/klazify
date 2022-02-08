@@ -1,6 +1,7 @@
 declare module 'klazify' {
   
   import * as EStyleSheet from 'react-native-extended-stylesheet';
+  import React from 'react';
   
   /**
    * This method must be run before css() method.
@@ -59,6 +60,13 @@ declare module 'klazify' {
    */
   function css(styles: string | object);
   
-  export {init, css, EStyleSheet};
+  function color(variableName: string);
+  
+  interface Popover {
+    children: React.Component;
+    content: React.Component;
+  }
+  
+  export {init, css, color, Popover};
   
 }
