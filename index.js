@@ -149,6 +149,7 @@ const css = (styles) => {
         return EStyleSheet.create({target: styles}).target;
     }
 };
-const color = (variableName) => Color(EStyleSheet.value(variableName));
+const value = (variableName) => EStyleSheet.value(variableName);
+const color = (variableName) => Color(value(variableName));
 
-export {css, init, color, Popover};
+export {css, init, color, value, Popover};

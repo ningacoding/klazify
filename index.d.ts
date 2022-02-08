@@ -60,6 +60,7 @@ declare module 'klazify' {
    */
   function css(styles: string | object);
   
+  function value(variableName: string): any;
   function color(variableName: string): Color<any>;
   
   interface Popover {
@@ -68,6 +69,6 @@ declare module 'klazify' {
     content: any;
   }
   
-  export {init, css, color, Popover};
+  export {init, css, color, value, Popover};
   
 }
