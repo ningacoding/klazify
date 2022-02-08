@@ -20,192 +20,192 @@ const defaultClasses = () => ({
     // Alerts
 
     'text-alert-blue': {
-        color: Color(EStyleSheet.value('$blue')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$blue')).darken(0.48).hex(),
     },
     'alert-blue': {
-        backgroundColor: Color(EStyleSheet.value('$blue')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$blue')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$blue')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$blue')).lighten(0.7).hex(),
     },
 
     'text-alert-indigo': {
-        color: Color(EStyleSheet.value('$indigo')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$indigo')).darken(0.48).hex(),
     },
     'alert-indigo': {
-        backgroundColor: Color(EStyleSheet.value('$indigo')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$indigo')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$indigo')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$indigo')).lighten(0.7).hex(),
     },
 
     'text-alert-purple': {
-        color: Color(EStyleSheet.value('$purple')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$purple')).darken(0.48).hex(),
     },
     'alert-purple': {
-        backgroundColor: Color(EStyleSheet.value('$purple')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$purple')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$purple')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$purple')).lighten(0.7).hex(),
     },
 
     'text-alert-pink': {
-        color: Color(EStyleSheet.value('$pink')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$pink')).darken(0.48).hex(),
     },
     'alert-pink': {
-        backgroundColor: Color(EStyleSheet.value('$pink')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$pink')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$pink')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$pink')).lighten(0.7).hex(),
     },
 
     'text-alert-red': {
-        color: Color(EStyleSheet.value('$red')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$red')).darken(0.48).hex(),
     },
     'alert-red': {
-        backgroundColor: Color(EStyleSheet.value('$red')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$red')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$red')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$red')).lighten(0.7).hex(),
     },
 
     'text-alert-orange': {
-        color: Color(EStyleSheet.value('$orange')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$orange')).darken(0.48).hex(),
     },
     'alert-orange': {
-        backgroundColor: Color(EStyleSheet.value('$orange')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$orange')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$orange')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$orange')).lighten(0.7).hex(),
     },
 
     'text-alert-yellow': {
-        color: Color(EStyleSheet.value('$yellow')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$yellow')).darken(0.48).hex(),
     },
     'alert-yellow': {
-        backgroundColor: Color(EStyleSheet.value('$yellow')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$yellow')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$yellow')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$yellow')).lighten(0.7).hex(),
     },
 
     'text-alert-green': {
-        color: Color(EStyleSheet.value('$green')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$green')).darken(0.48).hex(),
     },
     'alert-green': {
-        backgroundColor: Color(EStyleSheet.value('$green')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$green')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$green')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$green')).lighten(0.7).hex(),
     },
 
     'text-alert-teal': {
-        color: Color(EStyleSheet.value('$teal')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$teal')).darken(0.48).hex(),
     },
     'alert-teal': {
-        backgroundColor: Color(EStyleSheet.value('$teal')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$teal')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$teal')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$teal')).lighten(0.7).hex(),
     },
 
     'text-alert-cyan': {
-        color: Color(EStyleSheet.value('$cyan')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$cyan')).darken(0.48).hex(),
     },
     'alert-cyan': {
-        backgroundColor: Color(EStyleSheet.value('$cyan')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$cyan')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$cyan')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$cyan')).lighten(0.7).hex(),
     },
 
     'text-alert-gray': {
-        color: Color(EStyleSheet.value('$gray')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$gray')).darken(0.48).hex(),
     },
     'alert-gray': {
-        backgroundColor: Color(EStyleSheet.value('$gray')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$gray')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$gray')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$gray')).lighten(0.7).hex(),
     },
 
     'text-alert-gray-dark': {
-        color: Color(EStyleSheet.value('$grayDark')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$grayDark')).darken(0.48).hex(),
     },
     'alert-gray-dark': {
-        backgroundColor: Color(EStyleSheet.value('$grayDark')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$grayDark')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$grayDark')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$grayDark')).lighten(0.7).hex(),
     },
 
     'text-alert-primary': {
-        color: Color(EStyleSheet.value('$primary')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$primary')).darken(0.48).hex(),
     },
     'alert-primary': {
-        backgroundColor: Color(EStyleSheet.value('$primary')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$primary')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$primary')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$primary')).lighten(0.7).hex(),
     },
 
     'text-alert-secondary': {
-        color: Color(EStyleSheet.value('$secondary')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$secondary')).darken(0.48).hex(),
     },
     'alert-secondary': {
-        backgroundColor: Color(EStyleSheet.value('$secondary')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$secondary')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$secondary')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$secondary')).lighten(0.7).hex(),
     },
 
     'text-alert-success': {
-        color: Color(EStyleSheet.value('$success')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$success')).darken(0.48).hex(),
     },
     'alert-success': {
-        backgroundColor: Color(EStyleSheet.value('$success')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$success')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$success')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$success')).lighten(0.7).hex(),
     },
 
     'text-alert-info': {
-        color: Color(EStyleSheet.value('$info')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$info')).darken(0.48).hex(),
     },
     'alert-info': {
-        backgroundColor: Color(EStyleSheet.value('$info')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$info')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$info')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$info')).lighten(0.7).hex(),
     },
 
     'text-alert-warning': {
-        color: Color(EStyleSheet.value('$warning')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$warning')).darken(0.48).hex(),
     },
     'alert-warning': {
-        backgroundColor: Color(EStyleSheet.value('$warning')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$warning')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$warning')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$warning')).lighten(0.7).hex(),
     },
 
     'text-alert-danger': {
-        color: Color(EStyleSheet.value('$danger')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$danger')).darken(0.48).hex(),
     },
     'alert-danger': {
-        backgroundColor: Color(EStyleSheet.value('$danger')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$danger')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$danger')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$danger')).lighten(0.7).hex(),
     },
 
     'text-alert-light': {
-        color: Color(EStyleSheet.value('$light')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$light')).darken(0.48).hex(),
     },
     'alert-light': {
-        backgroundColor: Color(EStyleSheet.value('$light')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$light')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$light')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$light')).lighten(0.7).hex(),
     },
 
     'text-alert-dark': {
-        color: Color(EStyleSheet.value('$dark')).darken(0.48).hex(),
+        color: () => Color(EStyleSheet.value('$dark')).darken(0.48).hex(),
     },
     'alert-dark': {
-        backgroundColor: Color(EStyleSheet.value('$dark')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$dark')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$dark')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$dark')).lighten(0.7).hex(),
     },
 
     'text-alert-black': {
         color: '$white',
     },
     'alert-black': {
-        backgroundColor: Color(EStyleSheet.value('$black')).lighten(0.8).hex(),
+        backgroundColor: () => Color(EStyleSheet.value('$black')).lighten(0.8).hex(),
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$black')).lighten(0.7).hex(),
+        borderColor: () => Color(EStyleSheet.value('$black')).lighten(0.7).hex(),
     },
 
     'fade': {},
@@ -275,23 +275,23 @@ const defaultClasses = () => ({
     'rounded-7-rem': {borderRadius: '7rem'},
     'rounded-8-rem': {borderRadius: '8rem'},
 
-    'rounded-t-1': {borderTopLeftRadius: 1,borderTopRightRadius: 1},
-    'rounded-t-2': {borderTopLeftRadius: 2,borderTopRightRadius: 2},
-    'rounded-t-3': {borderTopLeftRadius: 3,borderTopRightRadius: 3},
-    'rounded-t-4': {borderTopLeftRadius: 4,borderTopRightRadius: 4},
-    'rounded-t-5': {borderTopLeftRadius: 5,borderTopRightRadius: 5},
-    'rounded-t-6': {borderTopLeftRadius: 6,borderTopRightRadius: 6},
-    'rounded-t-7': {borderTopLeftRadius: 7,borderTopRightRadius: 7},
-    'rounded-t-8': {borderTopLeftRadius: 8,borderTopRightRadius: 8},
+    'rounded-t-1': {borderTopLeftRadius: 1, borderTopRightRadius: 1},
+    'rounded-t-2': {borderTopLeftRadius: 2, borderTopRightRadius: 2},
+    'rounded-t-3': {borderTopLeftRadius: 3, borderTopRightRadius: 3},
+    'rounded-t-4': {borderTopLeftRadius: 4, borderTopRightRadius: 4},
+    'rounded-t-5': {borderTopLeftRadius: 5, borderTopRightRadius: 5},
+    'rounded-t-6': {borderTopLeftRadius: 6, borderTopRightRadius: 6},
+    'rounded-t-7': {borderTopLeftRadius: 7, borderTopRightRadius: 7},
+    'rounded-t-8': {borderTopLeftRadius: 8, borderTopRightRadius: 8},
 
-    'rounded-b-1': {borderBottomLeftRadius: 1,borderBottomRightRadius: 1},
-    'rounded-b-2': {borderBottomLeftRadius: 2,borderBottomRightRadius: 2},
-    'rounded-b-3': {borderBottomLeftRadius: 3,borderBottomRightRadius: 3},
-    'rounded-b-4': {borderBottomLeftRadius: 4,borderBottomRightRadius: 4},
-    'rounded-b-5': {borderBottomLeftRadius: 5,borderBottomRightRadius: 5},
-    'rounded-b-6': {borderBottomLeftRadius: 6,borderBottomRightRadius: 6},
-    'rounded-b-7': {borderBottomLeftRadius: 7,borderBottomRightRadius: 7},
-    'rounded-b-8': {borderBottomLeftRadius: 8,borderBottomRightRadius: 8},
+    'rounded-b-1': {borderBottomLeftRadius: 1, borderBottomRightRadius: 1},
+    'rounded-b-2': {borderBottomLeftRadius: 2, borderBottomRightRadius: 2},
+    'rounded-b-3': {borderBottomLeftRadius: 3, borderBottomRightRadius: 3},
+    'rounded-b-4': {borderBottomLeftRadius: 4, borderBottomRightRadius: 4},
+    'rounded-b-5': {borderBottomLeftRadius: 5, borderBottomRightRadius: 5},
+    'rounded-b-6': {borderBottomLeftRadius: 6, borderBottomRightRadius: 6},
+    'rounded-b-7': {borderBottomLeftRadius: 7, borderBottomRightRadius: 7},
+    'rounded-b-8': {borderBottomLeftRadius: 8, borderBottomRightRadius: 8},
 
     'rounded-l-1': {borderBottomLeftRadius: 1, borderTopLeftRadius: 1},
     'rounded-r-1': {borderBottomRightRadius: 1, borderTopRightRadius: 1},
@@ -397,7 +397,7 @@ const defaultClasses = () => ({
     'btn': {
         backgroundColor: '$primary',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$primary')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$primary')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -584,7 +584,7 @@ const defaultClasses = () => ({
     'btn-outline-white': {
         backgroundColor: '$white',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$white')).darken(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$white')).darken(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -614,7 +614,7 @@ const defaultClasses = () => ({
     'btn-custom': {
         backgroundColor: '$danger',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$danger')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$danger')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -622,7 +622,7 @@ const defaultClasses = () => ({
     'btn-blue': {
         backgroundColor: '$blue',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$blue')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$blue')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -630,7 +630,7 @@ const defaultClasses = () => ({
     'btn-indigo': {
         backgroundColor: '$indigo',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$indigo')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$indigo')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -638,7 +638,7 @@ const defaultClasses = () => ({
     'btn-purple': {
         backgroundColor: '$purple',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$purple')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$purple')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -646,7 +646,7 @@ const defaultClasses = () => ({
     'btn-pink': {
         backgroundColor: '$pink',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$pink')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$pink')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -654,7 +654,7 @@ const defaultClasses = () => ({
     'btn-orange': {
         backgroundColor: '$orange',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$orange')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$orange')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -662,7 +662,7 @@ const defaultClasses = () => ({
     'btn-yellow': {
         backgroundColor: '$yellow',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$yellow')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$yellow')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -670,7 +670,7 @@ const defaultClasses = () => ({
     'btn-green': {
         backgroundColor: '$green',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$green')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$green')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -678,7 +678,7 @@ const defaultClasses = () => ({
     'btn-teal': {
         backgroundColor: '$teal',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$teal')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$teal')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -686,7 +686,7 @@ const defaultClasses = () => ({
     'btn-cyan': {
         backgroundColor: '$cyan',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$cyan')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$cyan')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -694,7 +694,7 @@ const defaultClasses = () => ({
     'btn-gray': {
         backgroundColor: '$gray',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$gray')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$gray')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -702,7 +702,7 @@ const defaultClasses = () => ({
     'btn-gray-1': {
         backgroundColor: '$gray1',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$gray1')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$gray1')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -710,7 +710,7 @@ const defaultClasses = () => ({
     'btn-gray-2': {
         backgroundColor: '$gray2',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$gray2')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$gray2')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -718,7 +718,7 @@ const defaultClasses = () => ({
     'btn-gray-3': {
         backgroundColor: '$gray3',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$gray3')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$gray3')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -726,7 +726,7 @@ const defaultClasses = () => ({
     'btn-gray-4': {
         backgroundColor: '$gray4',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$gray4')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$gray4')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -734,7 +734,7 @@ const defaultClasses = () => ({
     'btn-gray-5': {
         backgroundColor: '$gray5',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$gray5')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$gray5')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -742,7 +742,7 @@ const defaultClasses = () => ({
     'btn-gray-dark': {
         backgroundColor: '$grayDark',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$grayDark')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$grayDark')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -750,7 +750,7 @@ const defaultClasses = () => ({
     'btn-primary': {
         backgroundColor: '$primary',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$primary')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$primary')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -758,7 +758,7 @@ const defaultClasses = () => ({
     'btn-secondary': {
         backgroundColor: '$secondary',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$secondary')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$secondary')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -766,7 +766,7 @@ const defaultClasses = () => ({
     'btn-success': {
         backgroundColor: '$success',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$success')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$success')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -774,7 +774,7 @@ const defaultClasses = () => ({
     'btn-info': {
         backgroundColor: '$info',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$info')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$info')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -782,7 +782,7 @@ const defaultClasses = () => ({
     'btn-red': {
         backgroundColor: '$red',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$red')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$red')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -790,7 +790,7 @@ const defaultClasses = () => ({
     'btn-warning': {
         backgroundColor: '$warning',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$warning')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$warning')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -798,7 +798,7 @@ const defaultClasses = () => ({
     'btn-danger': {
         backgroundColor: '$danger',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$danger')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$danger')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -806,7 +806,7 @@ const defaultClasses = () => ({
     'btn-white': {
         backgroundColor: '$white',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$white')).darken(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$white')).darken(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -814,7 +814,7 @@ const defaultClasses = () => ({
     'btn-light': {
         backgroundColor: '$light',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$light')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$light')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -822,7 +822,7 @@ const defaultClasses = () => ({
     'btn-dark': {
         backgroundColor: '$dark',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$dark')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$dark')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -830,7 +830,7 @@ const defaultClasses = () => ({
     'btn-black': {
         backgroundColor: '$black',
         borderWidth: 1,
-        borderColor: Color(EStyleSheet.value('$black')).lighten(0.32).hex(),
+        borderColor: () => Color(EStyleSheet.value('$black')).lighten(0.32).hex(),
         borderRadius: 5,
         paddingHorizontal: '$btnPaddingHorizontal',
         paddingVertical: '$btnPaddingVertical',
@@ -1899,8 +1899,8 @@ const defaultClasses = () => ({
     'text-gray-4': {color: '$gray4'},
     'text-gray-5': {color: '$gray5'},
     'text-gray-dark': {color: '$grayDark'},
-    'text-50': {color: Color(EStyleSheet.value('$text')).lighten(0.5).hex()},
-    'text-light-50': {color: Color(EStyleSheet.value('$textLight')).lighten(0.5).hex()},
+    'text-50': {color: () => Color(EStyleSheet.value('$text')).lighten(0.5).hex()},
+    'text-light-50': {color: () => Color(EStyleSheet.value('$textLight')).lighten(0.5).hex()},
 
     // Toast
     'toast-body': {},
@@ -2060,7 +2060,7 @@ const defaultClasses = () => ({
     'text-subtitle': {fontSize: '1.2rem'},
     'text-btn': {fontSize: '1.16rem'},
     'text-bold': {fontWeight: 'bold'},
-    'text-disabled': {color: Color(EStyleSheet.value('$textLight')).lighten(0.5).hex()},
+    'text-disabled': {color: () => Color(EStyleSheet.value('$textLight')).lighten(0.5).hex()},
     'text-link': {textDecorationLine: 'underline'},
     'text-align-left': {textAlign: 'left'},
     'text-align-right': {textAlign: 'right'},
