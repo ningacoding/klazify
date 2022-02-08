@@ -122,6 +122,10 @@ You can see the source code how the components were build and all the examples i
 
 https://github.com/ningacoding/klazify-examples 
 
+Or open Expo Go Client for Android or Cam app for ios and scan this code:
+
+![image](https://user-images.githubusercontent.com/17342546/153075276-b083fb82-6c3d-4bc9-9a35-1bdb6e98563a.png)
+
 ## Theming
 
 ![image](https://user-images.githubusercontent.com/17342546/153057329-cd4b48b8-ce43-4033-a46c-dc7bee78fbe0.png)
