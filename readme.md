@@ -253,6 +253,15 @@ export default function TabsExample() {
 
 ## Popover
 
+```javascript
+<Popover ref={popoverRef}
+         // inline: true -> will adjust to ViewToBeClickedToShowPopover width, false -> will adjust to available width.
+         inline={false} 
+         content={<ViewInsidePopover/>}>
+ <ViewToBeClickedToShowPopover/>
+</Popover>
+ ```
+
 ![image](https://user-images.githubusercontent.com/17342546/153061947-eb7b7fcf-5362-4eef-be3a-a96fe7c39230.png)
 
 ## Forms
