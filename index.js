@@ -121,8 +121,10 @@ const init = (opts = {
     }
     EStyleSheet.build(rawGlobalVars);
     let customClassesMethod = _get(opts, 'customClasses');
-    if (!!customClassesMethod && typeof customClassesMethod !== 'function') {
-        console.log('customClasses must be a method / function. (ignoring values).')
+    if (typeof customClassesMethod !== 'function') {
+        if (!!customClassesMethod) {
+            console.log('klazify -> warning: customClasses must be a method / function. (ignoring value).')
+        }
         customClassesMethod = () => ({});
     }
     const allClasses = _merge(defaultClasses(), customClassesMethod());
