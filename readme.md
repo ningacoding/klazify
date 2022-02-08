@@ -135,6 +135,32 @@ Or open Expo Go Client for Android or Cam app for ios and scan this code:
 
 > Klazify is NOT a component library, with Klazify you can build the below example components just by combining, creating or overriding classes.
 
+
+> All the rules of [EStyleSheets](https://github.com/vitalets/react-native-extended-stylesheet) applies for init Klazify.
+
+```javascript
+init({
+    values: {
+        // define the current theme
+        primary: "#2340c9",
+        // etc...
+    },
+    extraGlobalVars: {
+        // add variables just like EStyleSheets
+        $awesomeVariable: '#FFF',
+    },
+    customClasses: () => {
+        // add your custom classes to be used, here.
+        'a-custom-class': {
+            // you can use "color" from klazify package to get a value 
+            // defined previously on values and extraGlobalVars (must be a color)
+            // and then you can handle it as defined in https://www.npmjs.com/package/color
+            backgroundColor: color('$primary').lighten(50).hex(),
+        },
+    }
+});
+```
+
 ## Buttons
 
 Source code example:
@@ -321,4 +347,6 @@ const [isActive1, setIsActive1] = useState(false);
 
 Klazify was made thanks to the [EStyleSheets](https://github.com/vitalets/react-native-extended-stylesheet) (extended style sheets) library, and every EStyleSheet rules aplies for Klazify, you can create, re-use, override variables, scaling, etc.
 
-Klazify also includes a Popover 
+Klazify also includes a Popover with was based on [Material Menu](https://github.com/mxck/react-native-material-menu) and we made it easy to use.
+
+Other dependencies: [color](https://www.npmjs.com/package/color) and [lodash](https://www.npmjs.com/package/lodash). 
