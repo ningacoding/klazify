@@ -350,3 +350,5 @@ Klazify was made thanks to the [EStyleSheets](https://github.com/vitalets/react-
 Klazify also includes a Popover with was based on [Material Menu](https://github.com/mxck/react-native-material-menu) and we made it easy to use.
 
 Other dependencies: [color](https://www.npmjs.com/package/color) and [lodash](https://www.npmjs.com/package/lodash). 
+
+Klazify copyright.
