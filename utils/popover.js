@@ -10,8 +10,8 @@ function Popover({children, content, inline}, ref) {
     const [buttonWidth, setButtonWidth] = useState(undefined);
 
     useImperativeHandle(ref, () => ({
-        toggleMenu: (value) => {
-            toggleMenu(value);
+        toggleMenu: (show) => {
+            toggleMenu(show);
         },
     }));
 
