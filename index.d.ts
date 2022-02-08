@@ -1,7 +1,6 @@
 declare module 'klazify' {
   
   import * as EStyleSheet from 'react-native-extended-stylesheet';
-  import React from 'react';
   import Color = require('color');
   
   /**
@@ -65,8 +64,8 @@ declare module 'klazify' {
   
   interface Popover {
     inline?: boolean;
-    children: React.Component;
-    content: React.Component;
+    children: any;
+    content: any;
   }
   
   export {init, css, color, Popover};
