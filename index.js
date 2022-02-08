@@ -19,7 +19,7 @@ let withLogs;
  * @private
  */
 const init = (opts = {
-    theme: undefined,
+    values: undefined,
     extraGlobalVars: undefined,
     customClasses: () => undefined,
     logs: false,
@@ -32,6 +32,7 @@ const init = (opts = {
     withLogs = _get(opts, 'logs');
 
     const defaultTheme = {
+        theme: 'default',
         defaultFontFamily: '',
 
         blue: '#0d6efd',
@@ -69,7 +70,7 @@ const init = (opts = {
         btnPaddingHorizontal: '1rem',
         btnPaddingVertical: '0.75rem',
     };
-    const colors = _merge(defaultTheme, _get(opts, 'theme'));
+    const colors = _merge(defaultTheme, _get(opts, 'values'));
     if (withLogs) {
         console.log('klazify', 'colors', colors);
     }
@@ -119,7 +120,7 @@ const init = (opts = {
     }
     EStyleSheet.build(rawGlobalVars);
     const customClassesMethod = _get(opts, 'customClasses');
-    if (typeof customClassesMethod !== 'function') {
+    if (!!customClassesMethod && typeof customClassesMethod !== 'function') {
         throw new Error('customClasses must be a method / function.');
     }
     const allClasses = _merge(defaultClasses(), customClassesMethod());
@@ -141,7 +142,7 @@ const css = (styles) => {
     if (typeof styles === 'string') {
         const picked = _pick(classes, styles.split(' '));
         if (withLogs) {
-            console.log('klazify\n', 'classes input -> ', styles, '\nstyles ->\n', picked);
+            console.log('klazify', '\nclasses input -> ', styles, '\nstyles ->\n', picked);
         }
         return _keys(picked).reduce((update, previous) => ({...update, ...picked[previous]}), {});
     }

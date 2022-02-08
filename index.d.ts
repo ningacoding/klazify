@@ -9,7 +9,8 @@ declare module 'klazify' {
    * @private
    */
   function init(opts?: {
-    theme?: {
+    values?: {
+      theme?: NotDefault<string>,
       defaultFontFamily?: string,
       
       blue?: string,
@@ -61,6 +62,7 @@ declare module 'klazify' {
   function css(styles: string | object);
   
   function value(variableName: string): any;
+  
   function color(variableName: string): Color<any>;
   
   interface Popover {
@@ -72,3 +74,5 @@ declare module 'klazify' {
   export {init, css, color, value, Popover};
   
 }
+
+type NotDefault<T> = T extends 'default' ? never : T;
