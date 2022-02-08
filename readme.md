@@ -2,7 +2,7 @@
 
 ## Klazify is a React Native Style Sheet utility 
 
-Klazify re-use styles just like CSS classes, highly inspired in bootstrap, but with the React Native limitations/features. It gives a professional and consistent look and feel, it also can improve the timeand the way you develop with React Native.
+Klazify re-use styles just like CSS classes, highly inspired in bootstrap, but with the React Native limitations/features. It gives a professional and consistent look and feel, it also can improve the time and the way you develop with React Native.
 
 Klazify loads all the Style Sheets from classes at the App startup and never more you StyleSheet.create() again, improving performance at runtime.
 
@@ -117,7 +117,7 @@ const styles = StyleSheets.create({
 
 ## Examples
 
-You can see all the examples in live, by running the next repository example:
+You can see the source code how the components were build and all the examples in live, in the next repository example:
 
 https://github.com/ningacoding/klazify-examples 
 
@@ -131,8 +131,6 @@ https://github.com/ningacoding/klazify-examples
 > Klazify is NOT a component library, with Klazify you can build the below example components just by combining, creating or overriding classes.
 
 ## Buttons
-
-![image](https://user-images.githubusercontent.com/17342546/153060743-a06b5915-6e37-41e1-b46c-0beac43f66ad.png)
 
 Source code example:
 
@@ -149,7 +147,24 @@ export default function Btn() {
 }
 ```
 
+![image](https://user-images.githubusercontent.com/17342546/153060743-a06b5915-6e37-41e1-b46c-0beac43f66ad.png)
+
 ## Buttons outline
+
+Source code example:
+
+```javascript 
+import {css} from 'klazify';
+
+export default function Btn() {
+ return <TouchableOpacity style={css('btn-outline-primary'} 
+                          onPress={()=>alert('Pressed!')}>
+    <Text style={css("text text-primary")}>
+      {"PRESS ME"}
+    </Text>
+  <View/>;
+}
+```
 
 ![image](https://user-images.githubusercontent.com/17342546/153061586-49d38bd5-e41e-4d00-8fcd-69409e9b03f0.png)
 
