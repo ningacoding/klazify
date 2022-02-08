@@ -6,7 +6,34 @@ Klazify re-use styles just like CSS classes, highly inspired in bootstrap, but w
 
 Klazify loads all the Style Sheets from classes at the App startup and never more you StyleSheet.create() again, improving performance at runtime.
 
-# Install
+# Table of contents
+
+- [Klazify](#klazify-v10)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Examples](#examples)
+  - [Theming](#theming)
+- [Building Components made easy](#building-components-made-easy)
+  - [Buttons](#buttons)
+  - [Buttons outline](#buttons-outline)
+  - [Buttons Extra](#buttons-extra)
+  - [Typography](#typography)
+  - [Grid](#grid)
+  - [Alignment](#alignment)
+  - [Tabs](#tabs)
+  - [Popover](#popover)
+  - [Forms](#forms)
+  - [Borders, Margin and Padding](#borders-margin-and-padding)
+  - [Separator](#separator)
+  - [Disable anything visually](#disable-anything-visually)
+  - [Progressbar](#progressbar)
+  - [Backgrounds](#backgrounds)
+  - [Shadows](#shadows)
+  - [Cards](#cards)
+  - [Alerts](#alerts)
+- [Basics and 3rd part credits](#basics-and-3rd-part-credits)
+
+## Install
 
 You can install Klazify in any ReactNative project with v0.43 or above.
 
@@ -19,7 +46,7 @@ With Yarn
 `yarn add klazify`
 
 
-# Usage
+## Usage
 
 
 
@@ -88,13 +115,13 @@ const styles = StyleSheets.create({
 
 ```
 
-# Examples
+## Examples
 
 You can see all the examples in live, by running the next repository example:
 
 https://github.com/ningacoding/klazify-examples 
 
-# Theming
+## Theming
 
 ![image](https://user-images.githubusercontent.com/17342546/153057329-cd4b48b8-ce43-4033-a46c-dc7bee78fbe0.png)
 
@@ -103,7 +130,7 @@ https://github.com/ningacoding/klazify-examples
 
 > Klazify is NOT a component library, with Klazify you can build the below example components just by combining, creating or overriding classes.
 
-# Buttons
+## Buttons
 
 ![image](https://user-images.githubusercontent.com/17342546/153060743-a06b5915-6e37-41e1-b46c-0beac43f66ad.png)
 
@@ -122,72 +149,70 @@ export default function Btn() {
 }
 ```
 
-# Buttons outline
+## Buttons outline
 
 ![image](https://user-images.githubusercontent.com/17342546/153061586-49d38bd5-e41e-4d00-8fcd-69409e9b03f0.png)
 
-# Buttons Extra
+## Buttons Extra
 
 ![image](https://user-images.githubusercontent.com/17342546/153061654-696eecad-701f-46c0-b7da-80a51a0b5cf7.png)
 
-# Typography
+## Typography
 
 ![image](https://user-images.githubusercontent.com/17342546/153061793-7f220f42-2920-4984-8dc7-cd6cda6bc5ab.png)
 
-# Grid
+## Grid
 
 ![image](https://user-images.githubusercontent.com/17342546/153061829-dcd6b9b1-2fa5-4b62-957b-be28fe8994eb.png)
 
-# Alignment
+## Alignment
 
 ![image](https://user-images.githubusercontent.com/17342546/153061869-6625cb8d-5cb8-4d3c-8d65-5e0c227f878f.png)
 
-# Tabs
+## Tabs
 
 ![image](https://user-images.githubusercontent.com/17342546/153061901-08464c8a-56cf-4332-b67b-e59bd0e55518.png)
 
-# Popover
+## Popover
 
 ![image](https://user-images.githubusercontent.com/17342546/153061947-eb7b7fcf-5362-4eef-be3a-a96fe7c39230.png)
 
-# Forms
+## Forms
 
 ![image](https://user-images.githubusercontent.com/17342546/153070246-742bb289-9de0-4157-9053-18ebce93853c.png)
 
-# Borders, Margin and Padding
+## Borders, Margin and Padding
 
 ![image](https://user-images.githubusercontent.com/17342546/153070309-5c957b48-ab54-4eda-96cf-d8d8ea45a8a3.png)
 
-# Separator 
+## Separator 
 
 ![image](https://user-images.githubusercontent.com/17342546/153070349-af3bddcc-d04e-4217-bd4f-0b672d71da25.png)
 
-# Disable anything visually
+## Disable anything visually
 
 ![image](https://user-images.githubusercontent.com/17342546/153070408-b17178cb-c19a-4141-ac39-a78c76e984e2.png)
 
-# Progressbar
+## Progressbar
 
 ![image](https://user-images.githubusercontent.com/17342546/153070450-1b1b18a6-90f3-4260-8ab2-5b9b67b82494.png)
 
-# Backgrounds
+## Backgrounds
 
 ![image](https://user-images.githubusercontent.com/17342546/153070485-4b64e2ca-6894-4e7d-9c63-741950a28a72.png)
 
-# Shadows
+## Shadows
 
 ![image](https://user-images.githubusercontent.com/17342546/153070566-295ba816-f178-4812-8f21-b0d88ab1ae32.png)
 
-# Cards
+## Cards
 
 ![image](https://user-images.githubusercontent.com/17342546/153070604-08c2a84f-f346-4b20-bcfc-6ed5dd90d47b.png)
 
-# Alerts
+## Alerts
 
 ![image](https://user-images.githubusercontent.com/17342546/153070641-7994ef3c-d9af-45b4-8705-30069e7c6304.png)
 
-
-# 
 
 # Basics and 3rd part credits
 
