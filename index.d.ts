@@ -63,6 +63,7 @@ declare module 'klazify' {
   function color(variableName: string);
   
   interface Popover {
+    inline?: boolean;
     children: React.Component;
     content: React.Component;
   }

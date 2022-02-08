@@ -349,9 +349,25 @@ const defaultClasses = () => ({
 
     // Button Modifiers
     'active button': {},
-    'btn-block': {},
-    'btn-lg': {},
-    'btn-sm': {},
+    'btn-block': {
+        flex: 1,
+    },
+    'link': {
+        textDecorationLine: 'underline',
+        color: '$primary',
+    },
+    'btn-padding': {
+        paddingHorizontal: '$btnPaddingHorizontal',
+        paddingVertical: '$btnPaddingVertical',
+    },
+    'btn-lg': {
+        paddingHorizontal: '$btnPaddingHorizontal * 1.5',
+        paddingVertical: '$btnPaddingVertical * 1.5',
+    },
+    'btn-sm': {
+        paddingHorizontal: '$btnPaddingHorizontal / 1.5',
+        paddingVertical: '$btnPaddingVertical / 1.5',
+    },
     'checkbox as button': {},
     'disabled button': {},
     'radio as button': {},
@@ -1682,8 +1698,6 @@ const defaultClasses = () => ({
     /**
      * Padding
      */
-    'p-btn': {paddingVertical: '0.86rem', paddingHorizontal: '1rem'},
-    'p-btn-sm': {paddingVertical: '0.35rem', paddingHorizontal: '0.5rem'},
     'p-half': {padding: '0.5rem'},
     'py-1-half': {padding: '1.5rem'},
     'p-0': {padding: undefined},

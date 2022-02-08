@@ -5,7 +5,7 @@ import {Menu} from 'react-native-material-menu';
 
 export default forwardRef(Popover);
 
-function Popover({children, content}, ref) {
+function Popover({children, content, inline}, ref) {
     const menuRef = useRef(null);
     const [buttonWidth, setButtonWidth] = useState(undefined);
 
@@ -28,7 +28,7 @@ function Popover({children, content}, ref) {
         }
     };
 
-    return <View onLayout={onButtonLayout}>
+    return <View onLayout={onButtonLayout} style={css(`${!!inline ? 'inline' : ''}`)}>
         <TouchableOpacity onPress={() => toggleMenu(true)}>
             {children}
         </TouchableOpacity>
