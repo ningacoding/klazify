@@ -2,6 +2,7 @@ declare module 'klazify' {
   
   import * as EStyleSheet from 'react-native-extended-stylesheet';
   import React from 'react';
+  import Color = require('color');
   
   /**
    * This method must be run before css() method.
@@ -60,7 +61,7 @@ declare module 'klazify' {
    */
   function css(styles: string | object);
   
-  function color(variableName: string);
+  function color(variableName: string): Color<any>;
   
   interface Popover {
     inline?: boolean;

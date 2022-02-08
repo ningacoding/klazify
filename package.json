@@ -1,6 +1,6 @@
 {
   "name": "klazify",
-  "version": "0.0.1-beta5",
+  "version": "0.0.1-beta5a",
   "description": "Fast, Reusable, React Native stylesheets classes.",
   "main": "index.js",
   "scripts": {},
@@ -28,10 +28,14 @@
   "peerDependencies": {
     "@types/react": "*",
     "@types/react-native": "*",
+    "@types/color": "*",
     "react": "*",
     "react-native": "*"
   },
   "devDependencies": {
+    "@types/react": "^17.0.39",
+    "@types/react-native": "^0.66.15",
+    "@types/color": "^3.0.3",
     "react": "^17.0.2",
     "react-native": "^0.67.2"
   }
