@@ -1,6 +1,6 @@
 {
   "name": "klazify",
-  "version": "0.0.1-beta3w",
+  "version": "0.0.1-beta3x",
   "description": "Fast, Reusable, React Native stylesheets classes.",
   "main": "index.js",
   "scripts": {},
@@ -18,7 +18,10 @@
   "license": "ISC",
   "dependencies": {
     "color": "3.2.1",
-    "lodash": "4.17.21",
+    "lodash.get": "4.4.2",
+    "lodash.merge": "4.6.2",
+    "lodash.keys": "4.2.0",
+    "lodash.pick": "4.4.0",
     "react-native-extended-stylesheet": "0.12.0",
     "react-native-material-menu": "^2.0.0"
   },

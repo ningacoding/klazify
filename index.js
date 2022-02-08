@@ -1,5 +1,8 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
-import _ from 'lodash';
+import _get from 'lodash.get';
+import _merge from 'lodash.merge';
+import _keys from 'lodash.keys';
+import _pick from 'lodash.pick';
 import defaultClasses from './classes';
 import Popover from './utils/popover';
 import Color from 'color';
@@ -26,7 +29,7 @@ const init = (opts = {
     // --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     // --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 
-    withLogs = _.get(opts, 'logs');
+    withLogs = _get(opts, 'logs');
 
     const defaultTheme = {
         defaultFontFamily: '',
@@ -66,62 +69,62 @@ const init = (opts = {
         btnPaddingHorizontal: '1rem',
         btnPaddingVertical: '0.75rem',
     };
-    const colors = _.merge(defaultTheme, _.get(opts, 'theme'));
+    const colors = _merge(defaultTheme, _get(opts, 'theme'));
     if (withLogs) {
         console.log('klazify', 'colors', colors);
     }
     const defaultGlobalVars = {
         $rem: 12,
-        $defaultFontFamily: _.get(colors, 'defaultFontFamily'),
-        $blue: _.get(colors, 'blue'),
-        $indigo: _.get(colors, 'indigo'),
-        $purple: _.get(colors, 'purple'),
-        $pink: _.get(colors, 'pink'),
-        $red: _.get(colors, 'red'),
-        $orange: _.get(colors, 'orange'),
-        $yellow: _.get(colors, 'yellow'),
-        $green: _.get(colors, 'green'),
-        $teal: _.get(colors, 'teal'),
-        $cyan: _.get(colors, 'cyan'),
-        $gray: _.get(colors, 'gray'),
-        $gray1: _.get(colors, 'gray1'),
-        $gray2: _.get(colors, 'gray2'),
-        $gray3: _.get(colors, 'gray3'),
-        $gray4: _.get(colors, 'gray4'),
-        $gray5: _.get(colors, 'gray5'),
-        $grayDark: _.get(colors, 'grayDark'),
-        $primary: _.get(colors, 'primary'),
-        $secondary: _.get(colors, 'secondary'),
-        $success: _.get(colors, 'success'),
-        $info: _.get(colors, 'info'),
-        $warning: _.get(colors, 'warning'),
-        $danger: _.get(colors, 'danger'),
-        $white: _.get(colors, 'white'),
-        $light: _.get(colors, 'light'),
-        $dark: _.get(colors, 'dark'),
-        $black: _.get(colors, 'black'),
-        $text: _.get(colors, 'text'),
-        $textLight: _.get(colors, 'textLight'),
-        $bgBody: _.get(colors, 'bgBody'),
-        $btnPaddingHorizontal: _.get(colors, 'btnPaddingHorizontal'),
-        $btnPaddingVertical: _.get(colors, 'btnPaddingVertical'),
+        $defaultFontFamily: _get(colors, 'defaultFontFamily'),
+        $blue: _get(colors, 'blue'),
+        $indigo: _get(colors, 'indigo'),
+        $purple: _get(colors, 'purple'),
+        $pink: _get(colors, 'pink'),
+        $red: _get(colors, 'red'),
+        $orange: _get(colors, 'orange'),
+        $yellow: _get(colors, 'yellow'),
+        $green: _get(colors, 'green'),
+        $teal: _get(colors, 'teal'),
+        $cyan: _get(colors, 'cyan'),
+        $gray: _get(colors, 'gray'),
+        $gray1: _get(colors, 'gray1'),
+        $gray2: _get(colors, 'gray2'),
+        $gray3: _get(colors, 'gray3'),
+        $gray4: _get(colors, 'gray4'),
+        $gray5: _get(colors, 'gray5'),
+        $grayDark: _get(colors, 'grayDark'),
+        $primary: _get(colors, 'primary'),
+        $secondary: _get(colors, 'secondary'),
+        $success: _get(colors, 'success'),
+        $info: _get(colors, 'info'),
+        $warning: _get(colors, 'warning'),
+        $danger: _get(colors, 'danger'),
+        $white: _get(colors, 'white'),
+        $light: _get(colors, 'light'),
+        $dark: _get(colors, 'dark'),
+        $black: _get(colors, 'black'),
+        $text: _get(colors, 'text'),
+        $textLight: _get(colors, 'textLight'),
+        $bgBody: _get(colors, 'bgBody'),
+        $btnPaddingHorizontal: _get(colors, 'btnPaddingHorizontal'),
+        $btnPaddingVertical: _get(colors, 'btnPaddingVertical'),
     };
     /**
      * extraGlobalVars will override existing vars in defaultGlobalVars if some var name is exactly equal.
      * @type {any}
      */
-    const rawGlobalVars = _.merge(defaultGlobalVars, _.get(opts, 'extraGlobalVars'));
+    const rawGlobalVars = _merge(defaultGlobalVars, _get(opts, 'extraGlobalVars'));
     if (withLogs) {
         console.log('klazify', 'rawGlobalVars', rawGlobalVars);
     }
     EStyleSheet.build(rawGlobalVars);
-    const customClassesMethod = _.get(opts, 'customClasses');
+    const customClassesMethod = _get(opts, 'customClasses');
     if (typeof customClassesMethod !== 'function') {
         throw new Error('customClasses must be a method / function.');
     }
-    const allClasses = _.merge(defaultClasses(), customClassesMethod());
+    const allClasses = _merge(defaultClasses(), customClassesMethod());
     if (withLogs) {
-        console.log('klazify', 'available classes ->\n', _.keys(allClasses).join(','));
+        console.log('klazify', 'available classes ->\n', _keys(allClasses).join(','));
     }
     classes = EStyleSheet.create(allClasses);
 };
@@ -136,11 +139,11 @@ const init = (opts = {
  */
 const css = (styles) => {
     if (typeof styles === 'string') {
-        const picked = _.pick(classes, styles.split(' '));
+        const picked = _pick(classes, styles.split(' '));
         if (withLogs) {
             console.log('klazify\n', 'classes input -> ', styles, '\nstyles ->\n', picked);
         }
-        return _.keys(picked).reduce((update, previous) => ({...update, ...picked[previous]}), {});
+        return _keys(picked).reduce((update, previous) => ({...update, ...picked[previous]}), {});
     }
     if (typeof styles === 'object') {
         return EStyleSheet.create({target: styles}).target;
