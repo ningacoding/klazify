@@ -1,4 +1,6 @@
 export default {
+    // This is a full list of pre-defined, common and very useful classes,
+    // if you need custom classes, you can create your own classes at init() method.
     classes: [
         'text-alert-blue',
         'alert-blue',
