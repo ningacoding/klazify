@@ -18,6 +18,8 @@ improving performance at runtime.
     - [Examples](#examples)
     - [Theming](#theming)
 - [Building Components made easy](#building-components-made-easy)
+    - [Customizing](#customizing)
+        - [Extending a Class](#extending-a-class)
     - [Buttons](#buttons)
     - [Buttons outline](#buttons-outline)
     - [Buttons Extra](#buttons-extra)
@@ -173,6 +175,11 @@ init({
             ...css("text"), // <--- extending a class
             // bellow props will override extended class props.
             textSize: "2rem",
+        },
+        'another-custom-class': {
+            // bellow props won't override extended class props.
+            textSize: "2rem",
+            ...css("text"), // <--- position is important
         },
     }
 });
