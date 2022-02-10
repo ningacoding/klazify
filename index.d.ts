@@ -1,8 +1,7 @@
 declare module 'klazify' {
   
-  import * as EStyleSheet from 'react-native-extended-stylesheet';
-  import Color = require('color');
   import {StyleProp, ViewStyle} from 'react-native';
+  import Color = require('color');
   
   /**
    * This method must be run before css() method.
@@ -49,8 +48,12 @@ declare module 'klazify' {
       btnPaddingHorizontal?: string | number,
       btnPaddingVertical?: string | number,
     },
-    extraGlobalVars?: EStyleSheet.AnyObject,
-    customClasses?: () => EStyleSheet.AnyObject,
+    extraGlobalVars?: {
+      [key: string]: any;
+    },
+    customClasses?: () => {
+      [key: string]: any;
+    },
     logs?: boolean,
   });
   
