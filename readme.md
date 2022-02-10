@@ -1,37 +1,40 @@
 # Klazify v1.0
 
-## Klazify is a React Native Style Sheet utility 
+## Klazify is a React Native Style Sheet utility
 
-Klazify re-use styles just like CSS classes, highly inspired in bootstrap, but with the React Native limitations/features. It gives a professional and consistent look and feel, it also can improve the time and the way you develop with React Native.
+Klazify re-use styles just like CSS classes, highly inspired in bootstrap, but with the React Native
+limitations/features. It gives a professional and consistent look and feel, it also can improve the time and the way you
+develop with React Native.
 
-Klazify loads all the Style Sheets from classes at the App startup and never more you StyleSheet.create() again, improving performance at runtime.
+Klazify loads all the Style Sheets from classes at the App startup and never more you StyleSheet.create() again,
+improving performance at runtime.
 
 # Table of contents
 
 - [Klazify](#klazify-v10)
-  - [Install](#install)
-  - [Usage](#usage)
-    - [List of classes](#list-of-classes)
-  - [Examples](#examples)
-  - [Theming](#theming)
+    - [Install](#install)
+    - [Usage](#usage)
+        - [List of classes](#list-of-classes)
+    - [Examples](#examples)
+    - [Theming](#theming)
 - [Building Components made easy](#building-components-made-easy)
-  - [Buttons](#buttons)
-  - [Buttons outline](#buttons-outline)
-  - [Buttons Extra](#buttons-extra)
-  - [Typography](#typography)
-  - [Grid](#grid)
-  - [Alignment](#alignment)
-  - [Tabs](#tabs)
-  - [Popover](#popover)
-  - [Forms](#forms)
-  - [Borders, Margin and Padding](#borders-margin-and-padding)
-  - [Separator](#separator)
-  - [Disable anything visually](#disable-anything-visually)
-  - [Progressbar](#progressbar)
-  - [Backgrounds](#backgrounds)
-  - [Shadows](#shadows)
-  - [Cards](#cards)
-  - [Alerts](#alerts)
+    - [Buttons](#buttons)
+    - [Buttons outline](#buttons-outline)
+    - [Buttons Extra](#buttons-extra)
+    - [Typography](#typography)
+    - [Grid](#grid)
+    - [Alignment](#alignment)
+    - [Tabs](#tabs)
+    - [Popover](#popover)
+    - [Forms](#forms)
+    - [Borders, Margin and Padding](#borders-margin-and-padding)
+    - [Separator](#separator)
+    - [Disable anything visually](#disable-anything-visually)
+    - [Progressbar](#progressbar)
+    - [Backgrounds](#backgrounds)
+    - [Shadows](#shadows)
+    - [Cards](#cards)
+    - [Alerts](#alerts)
 - [Basics and 3rd part credits](#basics-and-3rd-part-credits)
 
 ## Install
@@ -46,10 +49,7 @@ With Yarn
 
 `yarn add klazify`
 
-
 ## Usage
-
-
 
 It's usage is very very simple, you just need to call the method init just for the first time to load the setup.
 
@@ -57,7 +57,7 @@ It's usage is very very simple, you just need to call the method init just for t
 import {init} from 'klazify';
 
 // this loads all default config
-init();
+init(); // <--- outside App function
 
 export default function App() {
  return <View>
@@ -68,15 +68,13 @@ export default function App() {
 }
 ```
 
-
-
 Now you are ready to add some classes to any React Component, combine classes to satisfy your needs:
 
 ```javascript 
 import {css} from 'klazify';
 
 export default function AwesomeView() {
- return <View style={css('p-1 bg-primary flex center'}>
+ return <View style={css('p-1 bg-primary flex center')}>
     <Text style={css("text text-white")}>
       {"Awesome View built with Klazify."}
     </Text>
@@ -85,6 +83,7 @@ export default function AwesomeView() {
 ```
 
 ### List of classes
+
 Please see all [available classes](https://github.com/ningacoding/klazify/blob/main/available.classes.js)
 
 ## Save time and lines
@@ -117,14 +116,13 @@ const styles = StyleSheets.create({
     color: '#FFF' // or maybe creating a constant? with alot of imports ☹️
   }
 });
-
 ```
 
 ## Examples
 
 You can see the source code how the components were build and all the examples in live, in the next repository example:
 
-https://github.com/ningacoding/klazify-examples 
+https://github.com/ningacoding/klazify-examples
 
 Or open Expo Go Client for Android or Cam app for ios and scan this code:
 
@@ -134,13 +132,14 @@ Or open Expo Go Client for Android or Cam app for ios and scan this code:
 
 ![image](https://user-images.githubusercontent.com/17342546/153057329-cd4b48b8-ce43-4033-a46c-dc7bee78fbe0.png)
 
-
 # Building Components made easy
 
 > Klazify is NOT a component library, with Klazify you can build the below example components just by combining, creating or overriding classes.
 
 
 > All the rules of [EStyleSheets](https://github.com/vitalets/react-native-extended-stylesheet) applies for init Klazify.
+
+### Customizing
 
 ```javascript
 init({
@@ -165,6 +164,20 @@ init({
 });
 ```
 
+### Extending a Class
+```javascript
+init({
+    customClasses: () => {
+        // Your new class
+        'a-custom-class': {
+            ...css("text"), // <--- extending a class
+            // bellow props will override extended class props.
+            textSize: "2rem",
+        },
+    }
+});
+```
+
 ## Buttons
 
 Source code example:
@@ -173,7 +186,7 @@ Source code example:
 import {css} from 'klazify';
 
 export default function Btn() {
- return <TouchableOpacity style={css('btn-primary rounded-5'} 
+ return <TouchableOpacity style={css('btn-primary rounded-5')} 
                           onPress={()=>alert('Pressed!')}>
     <Text style={css("text text-white")}>
       {"PRESS ME"}
@@ -192,7 +205,7 @@ Source code example:
 import {css} from 'klazify';
 
 export default function Btn() {
- return <TouchableOpacity style={css('btn-outline-primary rounded-5'} 
+ return <TouchableOpacity style={css('btn-outline-primary rounded-5')} 
                           onPress={()=>alert('Pressed!')}>
     <Text style={css("text text-primary")}>
       {"PRESS ME"}
@@ -285,10 +298,10 @@ export default function TabsExample() {
 
 ```javascript
 <Popover ref={popoverRef}
-         // inline: true -> will adjust to ViewToBeClickedToShowPopover width, false -> will adjust to available width.
-         inline={false} 
+    // inline: true -> will adjust to ViewToBeClickedToShowPopover width, false -> will adjust to available width.
+         inline={false}
          content={<ViewInsidePopover/>}>
- <ViewToBeClickedToShowPopover/>
+    <ViewToBeClickedToShowPopover/>
 </Popover>
  ```
 
@@ -298,18 +311,21 @@ export default function TabsExample() {
 
 ```javascript
 import {css, color} from 'klazify';
-...
-const [isActive1, setIsActive1] = useState(false);
-...
-<Text style={css('text pb-half')}>
-       {'Basic Input:'}
-</Text>
-<TextInput style={css(`input text rounded-3 bg-panel ${isActive1 ? 'input-active' : ''}`)}
-    numberOfLines={1}
-    placeholder={'Type here...'}
-    placeholderTextColor={color('$gray').hex()}
-    onFocus={() => setIsActive1(true)}
-    onBlur={() => setIsActive1(false)}/>
+
+export default function AwesomeInput() {
+    const [isActive, setIsActive] = useState(false);
+    return <View>
+        <Text style={css('text pb-half')}>
+            {'Basic Input:'}
+        </Text>
+        <TextInput style={css(`input text rounded-3 bg-panel ${isActive1 ? 'input-active' : ''}`)}
+                   numberOfLines={1}
+                   placeholder={'Type here...'}
+                   placeholderTextColor={color('$gray').hex()}
+                   onFocus={() => setIsActive(true)}
+                   onBlur={() => setIsActive(false)}/>
+    </View>;
+}
 ```
 
 ![image](https://user-images.githubusercontent.com/17342546/153070246-742bb289-9de0-4157-9053-18ebce93853c.png)
@@ -318,7 +334,7 @@ const [isActive1, setIsActive1] = useState(false);
 
 ![image](https://user-images.githubusercontent.com/17342546/153070309-5c957b48-ab54-4eda-96cf-d8d8ea45a8a3.png)
 
-## Separator 
+## Separator
 
 ![image](https://user-images.githubusercontent.com/17342546/153070349-af3bddcc-d04e-4217-bd4f-0b672d71da25.png)
 
@@ -346,13 +362,15 @@ const [isActive1, setIsActive1] = useState(false);
 
 ![image](https://user-images.githubusercontent.com/17342546/153070641-7994ef3c-d9af-45b4-8705-30069e7c6304.png)
 
-
 # Basics and 3rd part credits
 
-Klazify was made thanks to the [EStyleSheets](https://github.com/vitalets/react-native-extended-stylesheet) (extended style sheets) library, and every EStyleSheet rules aplies for Klazify, you can create, re-use, override variables, scaling, etc.
+Klazify was made thanks to the [EStyleSheets](https://github.com/vitalets/react-native-extended-stylesheet) (extended
+style sheets) library, and every EStyleSheet rules aplies for Klazify, you can create, re-use, override variables,
+scaling, etc.
 
-Klazify also includes a Popover with was based on [Material Menu](https://github.com/mxck/react-native-material-menu) and we made it easy to use.
+Klazify also includes a Popover with was based on [Material Menu](https://github.com/mxck/react-native-material-menu)
+and we made it easy to use.
 
-Other dependencies: [color](https://www.npmjs.com/package/color) and [lodash](https://www.npmjs.com/package/lodash). 
+Other dependencies: [color](https://www.npmjs.com/package/color) and [lodash](https://www.npmjs.com/package/lodash).
 
 Klazify copyright.
