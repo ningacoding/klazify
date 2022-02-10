@@ -1799,6 +1799,15 @@ const defaultClasses = () => ({
         opacity: 0.32,
     },
 
+    'p-tag': {
+        paddingHorizontal: '0.5rem',
+        paddingVertical: '0.25rem',
+    },
+    'p-tag-sm': {
+        paddingHorizontal: '0.48rem',
+        paddingVertical: '0.24rem',
+    },
+
     /**
      * TODO: replace scaleY with transform
      */
