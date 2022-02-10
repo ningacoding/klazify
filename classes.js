@@ -1327,7 +1327,7 @@ const defaultClasses = () => ({
      */
     'text-sm': {
         fontSize: '0.75rem',
-        fontWeight: "500",
+        fontWeight: '500',
     },
     'text-md': {
         fontSize: '1.5rem',
@@ -1410,9 +1410,9 @@ const defaultClasses = () => ({
     'w-23': {width: '23rem'},
     'w-24': {width: '24rem'},
 
-    "w-25-p": {width: "25%"},
-    "w-50-p": {width: "50%"},
-    "w-100-p": {width: "100%"},
+    'w-25-p': {width: '25%'},
+    'w-50-p': {width: '50%'},
+    'w-100-p': {width: '100%'},
 
     /**
      * Height
@@ -1790,6 +1790,13 @@ const defaultClasses = () => ({
         alignSelf: 'center',
         maxWidth: '48rem',
         width: '100%',
+    },
+
+    'transparent': {
+        opacity: 0,
+    },
+    'disabled': {
+        opacity: 0.32,
     },
 
     /**
