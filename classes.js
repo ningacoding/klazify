@@ -208,7 +208,6 @@ const defaultClasses = () => ({
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-
     },
 
 
@@ -1329,6 +1328,7 @@ const defaultClasses = () => ({
      */
     'text-sm': {
         fontSize: '0.75rem',
+        fontWeight: "500",
     },
     'text-md': {
         fontSize: '1.5rem',
@@ -1343,8 +1343,8 @@ const defaultClasses = () => ({
         fontSize: '3rem',
     },
 
-    'text-title': {fontSize: '1.4rem'},
-    'text-subtitle': {fontSize: '1.2rem'},
+    'text-title': {fontSize: '1.8rem'},
+    'text-subtitle': {fontSize: '1.4rem'},
     'text-btn': {fontSize: '1.16rem'},
     'text-bold': {fontWeight: 'bold'},
     'text-disabled': {color: Color(EStyleSheet.value('$textLight')).lighten(0.5).hex()},
@@ -1380,100 +1380,62 @@ const defaultClasses = () => ({
      * Width
      */
     'width-auto': {width: 'auto'},
-    'w-1': {width: '1 * $rem'},
-    'w-2': {width: '2 * $rem'},
-    'w-3': {width: '3 * $rem'},
-    'w-4': {width: '4 * $rem'},
-    'w-5': {width: '5 * $rem'},
-    'w-6': {width: '6 * $rem'},
-    'w-7': {width: '7 * $rem'},
-    'w-8': {width: '8 * $rem'},
-    'w-9': {width: '9 * $rem'},
-    'w-10': {width: '10 * $rem'},
-    'w-15': {width: '15 * $rem'},
-    'w-20': {width: '20 * $rem'},
-    'w-100-p': {width: '100%'},
-    // 'ws-1': {width: '$screenWidth / 1'},
-    // 'ws-16-p': {width: '$screenWidth * 0.16'},
-    // 'ws-25-p': {width: '$screenWidth * 0.25'},
-    // 'ws-35-p': {width: '$screenWidth * 0.35'},
-    // 'ws-half': {width: '$screenWidth * 0.5'},
-    // 'ws-75-p': {width: '$screenWidth * 0.75'},
-    // 'ws-85-p': {width: '$screenWidth * 0.85'},
-    // 'mws-85-p': {maxWidth: '$screenWidth * 0.85'},
-    // 'ws-2': {width: '$screenWidth / 2'},
-    // 'ws-3': {width: '$screenWidth / 3'},
-    // 'ws-4': {width: '$screenWidth / 4'},
-    // 'ws-5': {width: '$screenWidth / 5'},
-    // 'ws-6': {width: '$screenWidth / 6'},
-    // 'ws-7': {width: '$screenWidth / 7'},
-    // 'ws-8': {width: '$screenWidth / 8'},
-
-    /**
-     * Height
-     */
-    'h-1': {height: '1rem * $rem'},
-    'h-2': {height: '2rem * $rem'},
-    'h-3': {height: '3rem * $rem'},
-    'h-4': {height: '4rem * $rem'},
-    'h-5': {height: '5rem * $rem'},
-    'h-6': {height: '6rem * $rem'},
-    'h-7': {height: '7rem * $rem'},
-    'h-8': {height: '8rem * $rem'},
-    'h-9': {height: '9rem * $rem'},
-    'h-10': {height: '10rem * $rem'},
-    'h-12': {height: '12rem * $rem'},
-    'h-15': {height: '15rem * $rem'},
-    'h-20': {height: '20rem * $rem'},
-
 
     /**
      * Width
      */
-    'width-half': {width: '0.5rem'},
-    'width-1': {width: '1rem'},
-    'width-1-half': {width: '1.5rem'},
-    'width-2': {width: '2rem'},
-    'width-3': {width: '3rem'},
-    'width-4': {width: '4rem'},
-    'width-5': {width: '5rem'},
-    'width-6': {width: '6rem'},
-    'width-7': {width: '7rem'},
-    'width-8': {width: '8rem'},
-    'width-9': {width: '9rem'},
-    'width-10': {width: '10rem'},
-    'width-11': {width: '11rem'},
-    'width-12': {width: '12rem'},
-    'width-13': {width: '13rem'},
-    'width-14': {width: '14rem'},
-    'width-15': {width: '15rem'},
-    'width-16': {width: '16rem'},
-    'width-17': {width: '17rem'},
-    'width-18': {width: '18rem'},
-    'width-19': {width: '19rem'},
-    'width-20': {width: '20rem'},
+    'w-half': {width: '0.5rem'},
+    'w-1': {width: '1rem'},
+    'w-1-half': {width: '1.5rem'},
+    'w-2': {width: '2rem'},
+    'w-3': {width: '3rem'},
+    'w-4': {width: '4rem'},
+    'w-5': {width: '5rem'},
+    'w-6': {width: '6rem'},
+    'w-7': {width: '7rem'},
+    'w-8': {width: '8rem'},
+    'w-9': {width: '9rem'},
+    'w-10': {width: '10rem'},
+    'w-11': {width: '11rem'},
+    'w-12': {width: '12rem'},
+    'w-13': {width: '13rem'},
+    'w-14': {width: '14rem'},
+    'w-15': {width: '15rem'},
+    'w-16': {width: '16rem'},
+    'w-17': {width: '17rem'},
+    'w-18': {width: '18rem'},
+    'w-19': {width: '19rem'},
+    'w-20': {width: '20rem'},
+    'w-21': {width: '21rem'},
+    'w-22': {width: '22rem'},
+    'w-23': {width: '23rem'},
+    'w-24': {width: '24rem'},
+
+    "w-25-p": {width: "25%"},
+    "w-50-p": {width: "50%"},
+    "w-100-p": {width: "100%"},
 
     /**
      * Height
      */
-    'height-half': {height: '0.5rem'},
-    'height-1': {height: '1rem'},
-    'height-1-half': {height: '1.5rem'},
-    'height-2': {height: '2rem'},
-    'height-3': {height: '3rem'},
-    'height-4': {height: '4rem'},
-    'height-5': {height: '5rem'},
-    'height-6': {height: '6rem'},
-    'height-7': {height: '7rem'},
-    'height-8': {height: '8rem'},
-    'height-9': {height: '9rem'},
-    'height-10': {height: '10rem'},
-    'height-12': {height: '12rem'},
-    'height-15': {height: '15rem'},
-    'height-16': {height: '16rem'},
-    'height-20': {height: '20rem'},
-    'height-21': {height: '21rem'},
-    'height-22': {height: '22rem'},
+    'h-half': {height: '0.5rem'},
+    'h-1': {height: '1rem'},
+    'h-1-half': {height: '1.5rem'},
+    'h-2': {height: '2rem'},
+    'h-3': {height: '3rem'},
+    'h-4': {height: '4rem'},
+    'h-5': {height: '5rem'},
+    'h-6': {height: '6rem'},
+    'h-7': {height: '7rem'},
+    'h-8': {height: '8rem'},
+    'h-9': {height: '9rem'},
+    'h-10': {height: '10rem'},
+    'h-12': {height: '12rem'},
+    'h-15': {height: '15rem'},
+    'h-16': {height: '16rem'},
+    'h-20': {height: '20rem'},
+    'h-21': {height: '21rem'},
+    'h-22': {height: '22rem'},
 
     /**
      * Max Width
@@ -1651,9 +1613,6 @@ const defaultClasses = () => ({
     /**
      * Others
      */
-    'disabled': {opacity: 0.32},
-    'transparent': {opacity: 0},
-    'display-none': {width: 0, height: 0, opacity: 0},
     'img': {
         aspectRatio: 1,
         height: 'auto',
@@ -1665,25 +1624,6 @@ const defaultClasses = () => ({
     'img-16-9': {
         aspectRatio: 16 / 9,
         height: 'auto',
-    },
-    'img-387X81': {
-        aspectRatio: 397 / 93,
-        height: 'auto',
-    },
-    'img-272X224': {
-        aspectRatio: 272 / 224,
-        height: 'auto',
-    },
-    'img-220X42': {
-        aspectRatio: 220 / 42,
-        height: 'auto',
-    },
-    'img-146X107': {
-        aspectRatio: 146 / 107,
-        height: 'auto',
-    },
-    'avatar-navbar': {
-        marginVertical: '-0.5rem',
     },
     'center': {
         alignItems: 'center',
@@ -1739,11 +1679,6 @@ const defaultClasses = () => ({
         position: 'absolute',
         right: '-0.5rem',
         top: '-0.25rem',
-    },
-    'icon-close': {
-        position: 'absolute',
-        right: '0.5rem',
-        top: '0.5rem',
     },
     'bl-0': {borderLeftWidth: 0, borderColor: 'transparent'},
     'br-0': {borderRightWidth: 0, borderColor: 'transparent'},
