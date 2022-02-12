@@ -1,7 +1,7 @@
 import {forwardRef, useImperativeHandle, useRef, useState} from 'react';
 import {TouchableOpacity, View} from 'react-native';
 import {css} from 'klazify';
-import {Menu} from 'react-native-material-menu';
+import Menu from 'react-native-material-menu';
 
 export default forwardRef(Popover);
 
