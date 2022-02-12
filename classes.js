@@ -912,6 +912,7 @@ const defaultClasses = () => ({
 
     // Grid
     'col': {
+        flex: 1,
         flexDirection: 'column',
     },
     'col-auto': {
