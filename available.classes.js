@@ -67,6 +67,7 @@ export default {
         'badge-cyan',
         'badge-danger',
         'badge-dark',
+        'badge-fixed',
         'badge-gray',
         'badge-gray-1',
         'badge-gray-2',
