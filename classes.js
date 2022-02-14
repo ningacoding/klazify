@@ -1644,17 +1644,6 @@ const defaultClasses = () => ({
     'b-light': {borderColor: '$light'},
     'b-dark': {borderColor: '$dark'},
     'b-black': {borderColor: '$black'},
-
-    'badge-fixed': {
-        position: 'absolute',
-        right: '0.25rem',
-        top: '-0.25rem',
-    },
-    'badge-fixed-2': {
-        position: 'absolute',
-        right: '-0.5rem',
-        top: '-0.25rem',
-    },
     'badge': {
         backgroundColor: "$primary",
         position: "absolute",
