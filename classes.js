@@ -1,5 +1,6 @@
 import Color from 'color';
 import EStyleSheet from 'react-native-extended-stylesheet';
+import {css} from 'klazify';
 
 /**
  * More info about extended stylesheet visit:
@@ -195,24 +196,7 @@ const defaultClasses = () => ({
         borderColor: Color(EStyleSheet.value('$black')).lighten(0.7).hex(),
     },
 
-
-    // Badges
-    'badge': {
-        backgroundColor: '$primary',
-        padding: '0.5rem',
-        marginVertical: 1,
-        borderRadius: 28,
-        minWidth: 28,
-        color: '$white',
-        fontWeight: 'bold',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: 'center',
-    },
-
-
     // Borders
-
 
     /**
      * Rounded
@@ -1320,7 +1304,10 @@ const defaultClasses = () => ({
         flex: 0,
         flexGrow: 0,
     },
-    'inline': {alignSelf: 'flex-start'},
+    'inline': {
+        alignSelf: 'flex-start',
+        position: 'relative',
+    },
     'align-right': {alignSelf: 'flex-end'},
 
     /**
@@ -1680,6 +1667,103 @@ const defaultClasses = () => ({
         right: '-0.5rem',
         top: '-0.25rem',
     },
+
+    'badge': {
+        padding: '0.5rem',
+        marginVertical: 1,
+        borderRadius: 28,
+        minWidth: 28,
+        color: '$white',
+        fontWeight: 'bold',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        ...css('bg-primary position-absolute'),
+        right: '-1rem',
+        top: '-1rem',
+    },
+    'badge-blue': {
+        ...css('badge bg-blue'),
+    },
+    'badge-indigo': {
+        ...css('badge bg-indigo'),
+    },
+    'badge-purple': {
+        ...css('badge bg-purple'),
+    },
+    'badge-pink': {
+        ...css('badge bg-pink'),
+    },
+    'badge-red': {
+        ...css('badge bg-red'),
+    },
+    'badge-orange': {
+        ...css('badge bg-orange'),
+    },
+    'badge-yellow': {
+        ...css('badge bg-yellow'),
+    },
+    'badge-green': {
+        ...css('badge bg-green'),
+    },
+    'badge-teal': {
+        ...css('badge bg-teal'),
+    },
+    'badge-cyan': {
+        ...css('badge bg-cyan'),
+    },
+    'badge-gray': {
+        ...css('badge bg-gray'),
+    },
+    'badge-gray-1': {
+        ...css('badge bg-gray-1'),
+    },
+    'badge-gray-2': {
+        ...css('badge bg-gray-2'),
+    },
+    'badge-gray-3': {
+        ...css('badge bg-gray-3'),
+    },
+    'badge-gray-4': {
+        ...css('badge bg-gray-4'),
+    },
+    'badge-gray-5': {
+        ...css('badge bg-gray-5'),
+    },
+    'badge-gray-dark': {
+        ...css('badge bg-gray-dark'),
+    },
+    'badge-primary': {
+        ...css('badge bg-primary'),
+    },
+    'badge-secondary': {
+        ...css('badge bg-secondary'),
+    },
+    'badge-success': {
+        ...css('badge bg-success'),
+    },
+    'badge-info': {
+        ...css('badge bg-info'),
+    },
+    'badge-warning': {
+        ...css('badge bg-warning'),
+    },
+    'badge-danger': {
+        ...css('badge bg-danger'),
+    },
+    'badge-white': {
+        ...css('badge bg-white'),
+    },
+    'badge-light': {
+        ...css('badge bg-light'),
+    },
+    'badge-dark': {
+        ...css('badge bg-dark'),
+    },
+    'badge-black': {
+        ...css('badge bg-black'),
+    },
+
     'bl-0': {borderLeftWidth: 0, borderColor: 'transparent'},
     'br-0': {borderRightWidth: 0, borderColor: 'transparent'},
     'b-0': {borderWidth: 0, borderColor: 'transparent'},
@@ -1809,10 +1893,11 @@ const defaultClasses = () => ({
         paddingVertical: '0.24rem',
     },
 
-    /**
-     * TODO: replace scaleY with transform
-     */
-    // 'invert': {scaleY: -1},
 });
+
+/**
+ * TODO: replace scaleY with transform
+ */
+// 'invert': scaleY: -1,
 
 export default defaultClasses;
