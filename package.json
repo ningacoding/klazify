@@ -1,6 +1,6 @@
 {
   "name": "klazify",
-  "version": "0.0.8",
+  "version": "0.0.8b",
   "description": "Fast, Reusable, React Native stylesheets classes.",
   "main": "index.js",
   "scripts": {},

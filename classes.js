@@ -1645,6 +1645,31 @@ const defaultClasses = () => ({
     'b-dark': {borderColor: '$dark'},
     'b-black': {borderColor: '$black'},
 
+    'badge-fixed': {
+        position: 'absolute',
+        right: '0.25rem',
+        top: '-0.25rem',
+    },
+    'badge-fixed-2': {
+        position: 'absolute',
+        right: '-0.5rem',
+        top: '-0.25rem',
+    },
+    'badge': {
+        backgroundColor: "$primary",
+        position: "absolute",
+        padding: '0.5rem',
+        marginVertical: 1,
+        borderRadius: 28,
+        minWidth: 28,
+        color: '$white',
+        fontWeight: 'bold',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        right: '-1rem',
+        top: '-1rem',
+    },
     'badge-sm': {
         backgroundColor: '$primary',
         padding: '0.25rem',
@@ -1657,111 +1682,86 @@ const defaultClasses = () => ({
         justifyContent: 'center',
         textAlign: 'center',
     },
-    'badge-fixed': {
-        position: 'absolute',
-        right: '0.25rem',
-        top: '-0.25rem',
-    },
-    'badge-fixed-2': {
-        position: 'absolute',
-        right: '-0.5rem',
-        top: '-0.25rem',
-    },
-
-    'badge': {
-        padding: '0.5rem',
-        marginVertical: 1,
-        borderRadius: 28,
-        minWidth: 28,
-        color: '$white',
-        fontWeight: 'bold',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: 'center',
-        ...css('bg-primary position-absolute'),
-        right: '-1rem',
-        top: '-1rem',
-    },
     'badge-blue': {
-        ...css('badge bg-blue'),
+        backgroundColor: "$blue",
     },
     'badge-indigo': {
-        ...css('badge bg-indigo'),
+        backgroundColor: "$indigo",
     },
     'badge-purple': {
-        ...css('badge bg-purple'),
+        backgroundColor: "$purple",
     },
     'badge-pink': {
-        ...css('badge bg-pink'),
+        backgroundColor: "$pink",
     },
     'badge-red': {
-        ...css('badge bg-red'),
+        backgroundColor: "$red",
     },
     'badge-orange': {
-        ...css('badge bg-orange'),
+        backgroundColor: "$orange",
     },
     'badge-yellow': {
-        ...css('badge bg-yellow'),
+        backgroundColor: "$yellow",
     },
     'badge-green': {
-        ...css('badge bg-green'),
+        backgroundColor: "$green",
     },
     'badge-teal': {
-        ...css('badge bg-teal'),
+        backgroundColor: "$teal",
     },
     'badge-cyan': {
-        ...css('badge bg-cyan'),
+        backgroundColor: "$cyan",
     },
     'badge-gray': {
-        ...css('badge bg-gray'),
+        backgroundColor: "$gray",
     },
     'badge-gray-1': {
-        ...css('badge bg-gray-1'),
+        backgroundColor: "$gray1",
     },
     'badge-gray-2': {
-        ...css('badge bg-gray-2'),
+        backgroundColor: "$gray2",
     },
     'badge-gray-3': {
-        ...css('badge bg-gray-3'),
+        backgroundColor: "$gray3",
     },
     'badge-gray-4': {
-        ...css('badge bg-gray-4'),
+        backgroundColor: "$gray4",
     },
     'badge-gray-5': {
-        ...css('badge bg-gray-5'),
+        backgroundColor: "$gray5",
     },
     'badge-gray-dark': {
-        ...css('badge bg-gray-dark'),
+        backgroundColor: "$grayDark",
     },
     'badge-primary': {
-        ...css('badge bg-primary'),
+        backgroundColor: "$primary",
     },
     'badge-secondary': {
-        ...css('badge bg-secondary'),
+        backgroundColor: "$secondary",
     },
     'badge-success': {
-        ...css('badge bg-success'),
+        backgroundColor: "$success",
     },
     'badge-info': {
-        ...css('badge bg-info'),
+        backgroundColor: "$info",
     },
     'badge-warning': {
-        ...css('badge bg-warning'),
+        backgroundColor: "$warning",
     },
     'badge-danger': {
-        ...css('badge bg-danger'),
+        backgroundColor: "$danger",
     },
     'badge-white': {
-        ...css('badge bg-white'),
+        backgroundColor: "$white",
     },
     'badge-light': {
-        ...css('badge bg-light'),
+        backgroundColor: "$light",
     },
     'badge-dark': {
-        ...css('badge bg-dark'),
+        backgroundColor: "$dark",
     },
     'badge-black': {
-        ...css('badge bg-black'),
+        backgroundColor: "$black",
     },
 
     'bl-0': {borderLeftWidth: 0, borderColor: 'transparent'},
