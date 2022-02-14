@@ -36,6 +36,7 @@ improving performance at runtime.
     - [Backgrounds](#backgrounds)
     - [Shadows](#shadows)
     - [Cards](#cards)
+    - [Badges](#badges)
     - [Alerts](#alerts)
 - [Basics and 3rd part credits](#basics-and-3rd-part-credits)
 
@@ -364,6 +365,10 @@ export default function AwesomeInput() {
 ## Cards
 
 ![image](https://user-images.githubusercontent.com/17342546/153070604-08c2a84f-f346-4b20-bcfc-6ed5dd90d47b.png)
+
+## Badges
+
+![image](https://user-images.githubusercontent.com/17342546/153796188-9ec53f33-a335-4402-b2bc-a0a74617dfa8.png)
 
 ## Alerts
 
