@@ -1,3 +1,4 @@
+import React from 'react';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import _get from 'lodash.get';
 import _merge from 'lodash.merge';
