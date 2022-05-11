@@ -2002,6 +2002,7 @@ const defaultClasses = () => ({
     'br-0': {borderRightWidth: 0, borderColor: 'transparent'},
     'b-0': {borderWidth: 0, borderColor: 'transparent'},
     'b-1': {borderWidth: 1, borderColor: '$gray2'},
+    'border': {borderWidth: 1, borderColor: '$gray2'},
     'b-2': {borderWidth: 2, borderColor: '$gray2'},
     'bt-1': {borderTopWidth: 1, borderColor: '$gray2'},
     'br-1': {borderRightWidth: 1, borderColor: '$gray2'},
