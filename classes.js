@@ -3375,7 +3375,6 @@ const defaultClasses = () => ({
   'border-dashed': {borderStyle: 'dashed'},
   'border-dotted': {borderStyle: 'dotted'},
 
-  'aspect-auto': {aspectRatio: 'auto'},
   'aspect-square': {aspectRatio: 1},
   'aspect-video': {aspectRatio: 16 / 9},
 
@@ -3424,14 +3423,14 @@ const defaultClasses = () => ({
   'columns-6xl': {columns: '72rem'},
   'columns-7xl': {columns: '80rem'},
 
-  'break-after-auto': {breakAfter: 'auto'},
-  'break-after-avoid': {breakAfter: 'avoid'},
-  'break-after-all': {breakAfter: 'all'},
-  'break-after-avoid-page': {breakAfter: 'avoid-page'},
-  'break-after-page': {breakAfter: 'page'},
-  'break-after-left': {breakAfter: 'left'},
-  'break-after-right': {breakAfter: 'right'},
-  'break-after-column': {breakAfter: 'column'},
+  // 'break-after-auto': {breakAfter: 'auto'},
+  // 'break-after-avoid': {breakAfter: 'avoid'},
+  // 'break-after-all': {breakAfter: 'all'},
+  // 'break-after-avoid-page': {breakAfter: 'avoid-page'},
+  // 'break-after-page': {breakAfter: 'page'},
+  // 'break-after-left': {breakAfter: 'left'},
+  // 'break-after-right': {breakAfter: 'right'},
+  // 'break-after-column': {breakAfter: 'column'},
 
 });
 
