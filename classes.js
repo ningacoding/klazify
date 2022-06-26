@@ -3374,8 +3374,6 @@ const defaultClasses = () => ({
   'border-solid': {borderStyle: 'solid'},
   'border-dashed': {borderStyle: 'dashed'},
   'border-dotted': {borderStyle: 'dotted'},
-  'border-hidden': {borderStyle: 'hidden'},
-  'border-none': {borderStyle: 'none'},
 
   'aspect-auto': {aspectRatio: 'auto'},
   'aspect-square': {aspectRatio: 1},
