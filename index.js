@@ -298,7 +298,7 @@ const init = (opts = {
   }
   const defaultGlobalVars = {
 
-    $rem: 12,
+    $rem: 16,
     $theme: _get(colors, 'theme'),
     $defaultFontFamily: _get(colors, 'defaultFontFamily'),
 
