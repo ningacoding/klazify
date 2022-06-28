@@ -1,5 +1,5 @@
 export const padding = {
-  'p-0': {padding: '0'},
+  'p-0': {padding: 0},
   'px-0': {paddingLeft: 0, paddingRight: 0},
   'py-0': {paddingTop: 0, paddingBottom: 0},
   'pt-0': {paddingTop: 0},
