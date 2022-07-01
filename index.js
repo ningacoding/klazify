@@ -35,7 +35,6 @@ const init = (opts = {
   const defaultTheme = {
     theme: 'default',
     defaultFontFamily: '',
-
     blue: '#0d6efd',
     indigo: '#6610f2',
     purple: '#6f42c1',
@@ -63,11 +62,9 @@ const init = (opts = {
     light: '#f8f9fa',
     dark: '#212529',
     black: '#000',
-
     text: '#000',
     textLight: '#FFF',
     bgBody: '#f8f9fa',
-
     slate50: '#f8fafc',
     slate100: '#f1f5f9',
     slate200: '#e2e8f0',
@@ -288,7 +285,6 @@ const init = (opts = {
     rose700: '#be123c',
     rose800: '#9f1239',
     rose900: '#881337',
-
     btnPaddingHorizontal: '1rem',
     btnPaddingVertical: '0.75rem',
   };
