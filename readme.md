@@ -57,7 +57,7 @@ Now you are ready to add some classes to any React Component, combine classes to
 import {css} from 'klazify';
 
 export default function AwesomeView() {
- return <View style={css('p-1 bg-primary flex center')}>
+ return <View style={css('p-1 bg-primary flex-1 center')}>
     <Text style={css("text text-white")}>
       {"Awesome View built with Klazify."}
     </Text>
@@ -71,8 +71,9 @@ Please see all [available classes](https://github.com/ningacoding/klazify/tree/m
 
 ## Save time and lines
 
-Success!! You have saved time and lines, your code is readable and you didn't write the below code:
+Success!! You have saved time and lines, your code is readable.
 
+FORGET THE OLD STYLES:
 ```javascript 
 import {StyleSheets} from 'react-native';
 
@@ -97,6 +98,10 @@ const styles = StyleSheets.create({
   text: {
     fontSize: 12,
     color: '#FFF' // or maybe creating a constant? with alot of imports ☹️
+  },
+  hybrid: {
+    fontSize: 12,
+    ...css('text text-green-500'), // just use klazify like this
   }
 });
 ```
