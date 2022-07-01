@@ -525,6 +525,10 @@ export const layout = {
   'z-auto': {zIndex: undefined},
 
   /**/
+  'z-index-min': {position: 'absolute', zIndex: 0},
+  'z-index-max': {position: 'absolute', zIndex: 9999},
+  'transparent': {opacity: 0},
+  'disabled': {opacity: 0.32},
   'inline': {alignSelf: 'flex-start', position: 'relative'},
   'align-right': {alignSelf: 'flex-end'},
   'img': {aspectRatio: 1, height: 'auto'},
@@ -533,4 +537,5 @@ export const layout = {
   'img-9-4': {aspectRatio: 9 / 4, height: 'auto'},
   'img-9-16': {aspectRatio: 9 / 16, height: 'auto'},
   'center': {alignItems: 'center', justifyContent: 'center'},
+  'position-absolute': {position: 'absolute'},
 };
