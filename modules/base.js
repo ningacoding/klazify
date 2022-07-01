@@ -2,15 +2,7 @@ import Color from 'color';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 export const base = () => ({
-  'btn-block': {flex: 1},
   'link': {textDecorationLine: 'underline', color: '$primary'},
-  'btn-padding': {paddingHorizontal: '$btnPaddingHorizontal', paddingVertical: '$btnPaddingVertical'},
-  'btn-sm': {paddingHorizontal: '$btnPaddingHorizontal * 0.64', paddingVertical: '$btnPaddingVertical * 0.64'},
-  'btn-md': {paddingHorizontal: '$btnPaddingHorizontal * 1.24', paddingVertical: '$btnPaddingVertical * 1.24'},
-  'btn-lg': {paddingHorizontal: '$btnPaddingHorizontal * 1.48', paddingVertical: '$btnPaddingVertical * 1.48'},
-  'btn-xl': {paddingHorizontal: '$btnPaddingHorizontal * 1.64', paddingVertical: '$btnPaddingVertical * 1.64'},
-  'btn-2xl': {paddingHorizontal: '$btnPaddingHorizontal * 1.96', paddingVertical: '$btnPaddingVertical * 1.96'},
-  'btn-3xl': {paddingHorizontal: '$btnPaddingHorizontal * 2.24', paddingVertical: '$btnPaddingVertical * 2.24'},
   'btn': {
     backgroundColor: '$primary',
     borderWidth: 1,
@@ -49,17 +41,16 @@ export const base = () => ({
   'tab-active': {marginBottom: -1},
   'tab-inactive': {marginTop: -1, borderBottomWidth: 1},
 
-  'icon': {fontSize: '1.5rem'},
-  'icon-xxs': {fontSize: '0.75rem'},
+  'icon-3xs': {fontSize: '0.5rem'},
+  'icon-2xs': {fontSize: '0.75rem'},
   'icon-xs': {fontSize: '1rem'},
-  'icon-sm': {fontSize: '1.2rem'},
-  'icon-md': {fontSize: '2rem'},
-  'icon-lg': {fontSize: '2.35rem'},
-  'icon-xl': {fontSize: '3rem'},
-  'icon-2xl': {fontSize: '4rem'},
-  'icon-3xl': {fontSize: '8rem'},
-  'logo-smt-drawer': {fontSize: '6rem'},
-  'icon-fullscreen': {fontSize: '12rem'},
+  'icon-sm': {fontSize: '1.25rem'},
+  'icon': {fontSize: '1.5rem'},
+  'icon-md': {fontSize: '1.75rem'},
+  'icon-lg': {fontSize: '2rem'},
+  'icon-xl': {fontSize: '2.25rem'},
+  'icon-2xl': {fontSize: '2.5rem'},
+  'icon-3xl': {fontSize: '2.75rem'},
 
   'badge-fixed': {position: 'absolute', right: '-1rem', top: '-1rem'},
   'badge': {
@@ -86,8 +77,4 @@ export const base = () => ({
     justifyContent: 'center',
     textAlign: 'center',
   },
-  'mh-input': {minHeight: '3rem'},
-  'list-item': {alignSelf: 'center', maxWidth: '48rem', width: '100%'},
-  'p-tag': {paddingHorizontal: '0.5rem', paddingVertical: '0.25rem'},
-  'p-tag-sm': {paddingHorizontal: '0.48rem', paddingVertical: '0.24rem'},
 });
