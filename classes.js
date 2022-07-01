@@ -22,7 +22,7 @@ import {base} from './modules/base';
 
 const defaultClasses = () => ({
 
-  ...base,
+  ...base(),
   ...background(),
   ...border,
   ...layout,
