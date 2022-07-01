@@ -8,6 +8,7 @@ import {width} from './modules/width';
 import {height} from './modules/height';
 import {typography} from './modules/typography';
 import {transforms} from './modules/transforms';
+import {base} from './modules/base';
 
 /**
  * More info about extended stylesheet visit:
@@ -21,6 +22,7 @@ import {transforms} from './modules/transforms';
 
 const defaultClasses = () => ({
 
+  ...base,
   ...background(),
   ...border,
   ...layout,
