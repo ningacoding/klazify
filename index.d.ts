@@ -60,20 +60,39 @@ declare module 'klazify' {
   /**
    * Applies all rules for StyleSheets (from react-native)
    * and EStyleSheets (from react-native-extended-stylesheet)
+   * Remember to run init() method at app startup.
    * @param styles
    * @private
    */
   function css(styles: string | object);
   
+  /**
+   * Returns a variable value.
+   * Remember to run init() method at app startup.
+   * @param variableName
+   * @private
+   */
   function value(variableName: string): any;
   
+  /**
+   * Returns a color value.
+   * Check npm package 'color' for more info.
+   * Remember to run init() method at app startup.
+   * @param variableName
+   * @private
+   */
   function color(variableName: string): Color<any>;
   
+  /**
+   * Component that shows a popup layout.
+   * Remember to run init() method at app startup.
+   */
   interface Popover {
-    inline?: boolean;
     children: any;
     content: any;
-    style: StyleProp<ViewStyle>;
+    style?: StyleProp<ViewStyle>;
+    contentContainerStyle?: StyleProp<ViewStyle>;
+    popupStyle?: StyleProp<ViewStyle>;
   }
   
   export {init, css, color, value, Popover};
