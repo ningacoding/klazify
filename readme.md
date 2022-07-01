@@ -67,7 +67,7 @@ export default function AwesomeView() {
 
 ### List of classes
 
-Please see all [available classes](https://github.com/ningacoding/klazify/blob/main/available.classes.js)
+Please see all [available classes](https://github.com/ningacoding/klazify/tree/main/modules)
 
 ## Save time and lines
 
@@ -107,8 +107,8 @@ Klazify was made thanks to the [EStyleSheets](https://github.com/vitalets/react-
 style sheets) library, and every EStyleSheet rules aplies for Klazify, you can create, re-use, override variables,
 scaling, etc.
 
-Klazify also includes a Popover with was based on [Material Menu](https://github.com/mxck/react-native-material-menu)
-and we made it easy to use.
+Klazify also includes a Popover which was based on [Material Menu](https://github.com/mxck/react-native-material-menu)
+but we made it easy to use.
 
 Other dependencies: [color](https://www.npmjs.com/package/color) and [lodash](https://www.npmjs.com/package/lodash).
 
