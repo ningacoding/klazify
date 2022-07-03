@@ -5,7 +5,7 @@ import Menu from 'react-native-material-menu';
 
 export default forwardRef(Popover);
 
-function Popover({children, content, style, contentContainerStyle, popupStyle}, ref) {
+function Popover({children, content, style, contentStyle, popupStyle}, ref) {
   const menuRef = useRef(null);
   const [buttonWidth, setButtonWidth] = useState(undefined);
 
@@ -29,13 +29,13 @@ function Popover({children, content, style, contentContainerStyle, popupStyle}, 
   };
 
   return <View onLayout={onButtonLayout}
-               style={contentContainerStyle}>
+               style={style}>
     <TouchableOpacity onPress={() => toggleMenu(true)}>
       {children}
     </TouchableOpacity>
-    <View style={[css('position-absolute top-0 left-0'), popupStyle]}>
+    <View style={!!contentStyle ? contentStyle : css('position-absolute top-0 left-0 rounded-5 bg-popover')}>
       <Menu ref={menuRef}
-            style={[css('rounded-5 bg-popover'), css({width: buttonWidth}), style]}>
+            style={[css({width: buttonWidth}), popupStyle]}>
         {content}
       </Menu>
     </View>

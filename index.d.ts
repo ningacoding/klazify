@@ -308,7 +308,7 @@ declare module 'klazify' {
     children?: React.ReactNode;
     content?: React.ReactNode;
     style?: StyleProp<ViewStyle> | undefined;
-    contentContainerStyle?: StyleProp<ViewStyle> | undefined;
+    contentStyle?: StyleProp<ViewStyle> | undefined;
     popupStyle?: StyleProp<ViewStyle> | undefined;
   }
   
