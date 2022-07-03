@@ -304,12 +304,16 @@ declare module 'klazify' {
    * Component that shows a popup layout.
    * Remember to run init() method at app startup.
    */
-  interface Popover {
-    children: any;
-    content: any;
-    style?: StyleProp<ViewStyle>;
-    contentContainerStyle?: StyleProp<ViewStyle>;
-    popupStyle?: StyleProp<ViewStyle>;
+  interface PopoverProps {
+    children?: React.ReactNode;
+    content?: React.ReactNode;
+    style?: StyleProp<ViewStyle> | undefined;
+    contentContainerStyle?: StyleProp<ViewStyle> | undefined;
+    popupStyle?: StyleProp<ViewStyle> | undefined;
+  }
+  
+  // noinspection JSUnusedGlobalSymbols
+  class Popover extends React.Component<PopoverProps> {
   }
   
   export {init, css, color, value, Popover};
