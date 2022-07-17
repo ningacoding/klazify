@@ -2,6 +2,7 @@ import React from 'react';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import _get from 'lodash.get';
 import _merge from 'lodash.merge';
+import _mergeWith from 'lodash.mergewith';
 import _keys from 'lodash.keys';
 import _pick from 'lodash.pick';
 import Color from 'color';
@@ -590,7 +591,11 @@ const css = (styles) => {
     if (withLogs) {
       console.log('klazify', '\nclasses input -> ', styles, '\nstyles ->\n', picked);
     }
-    return _keys(picked).reduce((update, previous) => ({...update, ...picked[previous]}), {});
+    return _keys(picked).reduce((update, previous) => _mergeWith(update, picked[previous], (objValue, srcValue) => {
+      if (Array.isArray(objValue)) {
+        return objValue.concat(srcValue);
+      }
+    }), {});
   }
   if (typeof styles === 'object') {
     return EStyleSheet.create({target: styles}).target;

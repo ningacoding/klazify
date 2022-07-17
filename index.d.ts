@@ -312,6 +312,12 @@ declare module 'klazify' {
     popupStyle?: StyleProp<ViewStyle> | undefined;
   }
   
+  interface PopoverRef {
+    toggleMenu: (show: boolean) => void,
+    show: () => void,
+    hide: () => void,
+  }
+  
   // noinspection JSUnusedGlobalSymbols
   class Popover extends React.Component<PopoverProps> {
   }
