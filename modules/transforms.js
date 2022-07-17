@@ -6,7 +6,7 @@
  * </View>
  */
 
-export const transforms = {
+export const transforms = () => ({
   'scale-0': {transform: [{scale: 0}]},
   'scale-x-0': {transform: [{scaleX: 0}]},
   'scale-y-0': {transform: [{scaleY: 0}]},
@@ -329,4 +329,4 @@ export const transforms = {
   '-skew-x-24': {transform: [{skewX: '-24deg'}]},
   '-skew-y-24': {transform: [{skewY: '-24deg'}]},
 
-};
+});

@@ -32,7 +32,7 @@ const defaultClasses = () => ({
   ...width,
   ...height,
   ...typography(),
-  ...transforms,
+  ...transforms(),
 
 });
 
