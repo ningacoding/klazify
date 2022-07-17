@@ -570,7 +570,7 @@ const init = (opts = {
     }
     customClassesMethod = () => ({});
   }
-  const allClasses = _merge(defaultClasses(), customClassesMethod());
+  const allClasses = _merge(defaultClasses(rawGlobalVars.$rem), customClassesMethod());
   if (withLogs) {
     console.log('klazify', 'available classes ->\n', _keys(allClasses).join(','));
   }
