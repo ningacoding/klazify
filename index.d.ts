@@ -1,6 +1,10 @@
+import {ListRenderItem} from 'react-native';
+import * as React from 'react';
+
 declare module 'klazify' {
   
   import {StyleProp, ViewStyle} from 'react-native';
+  // @ts-ignore
   import Color = require('color');
   
   /**
@@ -312,17 +316,36 @@ declare module 'klazify' {
     popupStyle?: StyleProp<ViewStyle> | undefined;
   }
   
-  interface PopoverRef {
-    toggleMenu: (show: boolean) => void,
-    show: () => void,
-    hide: () => void,
+  /**
+   * Component with useful selector with animation.
+   * Remember to run init() method at app startup.
+   */
+  interface HorizontalSelectorProps<ItemT> {
+    data: any[];
+    initialIndex?: number;
+    extraData?: any;
+    renderItem?: ListRenderItem<ItemT> | null | undefined;
+    containerStyle?: StyleProp<ViewStyle> | undefined;
+    selectorStyle?: StyleProp<ViewStyle> | undefined;
+    indicatorStyle?: StyleProp<ViewStyle> | undefined;
+    indicatorStyleWhenFirst?: StyleProp<ViewStyle> | undefined;
+    indicatorStyleWhenLast?: StyleProp<ViewStyle> | undefined;
+    animation?: string;
+    animationDuration?: number;
+    omitAnimationSelector?: boolean;
+    onItemSelected?: ({item: any, index: number}) => void;
+    onItemUnselected?: ({item: any, index: number}) => void;
   }
   
   // noinspection JSUnusedGlobalSymbols
   class Popover extends React.Component<PopoverProps> {
   }
   
-  export {init, css, color, value, Popover};
+  // noinspection JSUnusedGlobalSymbols
+  class HorizontalSelector extends React.Component<HorizontalSelectorProps<any>, any> {
+  }
+  
+  export {init, css, color, value, Popover, HorizontalSelector};
   
 }
 

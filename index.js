@@ -8,6 +8,7 @@ import _pick from 'lodash.pick';
 import Color from 'color';
 import defaultClasses from './classes.js';
 import Popover from './utils/popover.js';
+import HorizontalSelector from './utils/horizontal.selector.js';
 
 let classes;
 let withLogs;
@@ -604,4 +605,4 @@ const css = (styles) => {
 const value = (variableName) => EStyleSheet.value(variableName);
 const color = (variableName) => Color(value(variableName));
 
-export {css, init, color, value, Popover};
+export {css, init, color, value, Popover, HorizontalSelector};
