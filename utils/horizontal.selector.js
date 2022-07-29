@@ -34,7 +34,10 @@ export default function HorizontalSelector({
   const [dataState, setDataState] = useState([0]);
 
   useEffect(() => {
-    onPress(currentIndex + 1);
+    const targetIndex = currentIndex + 1;
+    if (currentIndexState !== targetIndex) {
+      onPress(targetIndex);
+    }
   }, [currentIndex]);
 
   useEffect(() => {
