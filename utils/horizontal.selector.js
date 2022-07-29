@@ -8,6 +8,7 @@ export default function HorizontalSelector({
                                              initialIndex = 0,
                                              extraData,
                                              renderItem,
+                                             renderIndicator,
                                              itemStyle,
                                              containerStyle,
                                              selectorStyle,
@@ -100,7 +101,9 @@ export default function HorizontalSelector({
                            indicatorStyle,
                            currentIndex === 1 ? indicatorStyleWhenFirst : undefined,
                            currentIndex === data.length ? indicatorStyleWhenLast : undefined,
-                         ]}/>
+                         ]}>
+          {typeof renderIndicator === 'function' ? renderIndicator() : null}
+        </Animatable.View>
       </Animatable.View>
       {data.map((item, index) => {
         return <Item key={index}

@@ -325,6 +325,8 @@ declare module 'klazify' {
     initialIndex?: number;
     extraData?: any;
     renderItem?: ListRenderItem<ItemT> | null | undefined;
+    renderIndicator?: ListRenderItem<ItemT> | null | undefined;
+    itemStyle?: StyleProp<ViewStyle> | undefined;
     containerStyle?: StyleProp<ViewStyle> | undefined;
     selectorStyle?: StyleProp<ViewStyle> | undefined;
     indicatorStyle?: StyleProp<ViewStyle> | undefined;
