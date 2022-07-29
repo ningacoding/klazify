@@ -8,6 +8,7 @@ export default function HorizontalSelector({
                                              initialIndex = 0,
                                              extraData,
                                              renderItem,
+                                             itemStyle,
                                              containerStyle,
                                              selectorStyle,
                                              indicatorStyle,
@@ -104,6 +105,7 @@ export default function HorizontalSelector({
       {data.map((item, index) => {
         return <Item key={index}
                      item={item}
+                     itemStyle={itemStyle}
                      index={index + 1}
                      isFirst={index === 0}
                      isLast={index === data.length - 1}
@@ -129,6 +131,7 @@ function Item({
                 currentIndex,
                 isLast,
                 isFirst,
+                itemStyle,
               }) {
   const [isActive, setIsActive] = useState(false);
   useEffect(() => {
@@ -151,9 +154,9 @@ function Item({
     }
   };
   return <Pressable onPress={() => onPressItem(isActive, true, isActive && index !== currentIndex)}
-                    style={css('grow')}>
+                    style={[css('flex-1'), itemStyle]}>
     <View onLayout={index === 1 ? onLayout : undefined}
-          style={css('grow')}>
+          style={itemStyle}>
       {renderItem({
         item,
         index: index - 1,
