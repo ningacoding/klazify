@@ -6,6 +6,7 @@ import {css} from 'klazify';
 export default function HorizontalSelector({
                                              data,
                                              initialIndex = 0,
+                                             currentIndex,
                                              extraData,
                                              renderItem,
                                              renderIndicator,
@@ -29,13 +30,17 @@ export default function HorizontalSelector({
   const [selectorWidth, setSelectorWidth] = useState(0);
   const [itemWidth, setItemWidth] = useState(0);
   const [itemHeight, setItemHeight] = useState(0);
-  const [currentIndex, setCurrentIndex] = useState(initialIndex + 1);
+  const [currentIndexState, setCurrentIndexState] = useState(initialIndex + 1);
   const [dataState, setDataState] = useState([0]);
+
+  useEffect(() => {
+    setCurrentIndexState(currentIndex + 1);
+  }, [currentIndex]);
 
   useEffect(() => {
     if (Array.isArray(data)) {
       setDataState(data);
-      onPress(currentIndex);
+      onPress(currentIndexState);
     } else {
       console.log('HorizontalSelector: data is not an array');
     }
@@ -45,7 +50,7 @@ export default function HorizontalSelector({
     return null;
   }
   const onPress = (targetIndex) => {
-    let fromIndex = currentIndex;
+    let fromIndex = currentIndexState;
     let toIndex = targetIndex;
     if (typeof animation === 'string') {
       viewIndicatorRef.current?.[animation](animationDuration);
@@ -72,7 +77,7 @@ export default function HorizontalSelector({
         }),
       });
     }
-    setCurrentIndex(targetIndex);
+    setCurrentIndexState(targetIndex);
   };
 
   const onLayout = ({nativeEvent: {layout: {width}}}) => setContainerWidth(width);
@@ -99,8 +104,8 @@ export default function HorizontalSelector({
                              height: itemHeight,
                            }),
                            indicatorStyle,
-                           currentIndex === 1 ? indicatorStyleWhenFirst : undefined,
-                           currentIndex === data.length ? indicatorStyleWhenLast : undefined,
+                           currentIndexState === 1 ? indicatorStyleWhenFirst : undefined,
+                           currentIndexState === data.length ? indicatorStyleWhenLast : undefined,
                          ]}>
           {typeof renderIndicator === 'function' ? renderIndicator() : null}
         </Animatable.View>
@@ -112,7 +117,7 @@ export default function HorizontalSelector({
                      index={index + 1}
                      isFirst={index === 0}
                      isLast={index === data.length - 1}
-                     currentIndex={currentIndex}
+                     currentIndexState={currentIndexState}
                      onLayout={onLayoutItem}
                      onPress={onPress}
                      renderItem={renderItem}
@@ -131,17 +136,17 @@ function Item({
                 renderItem,
                 onItemSelected,
                 onItemUnselected,
-                currentIndex,
+                currentIndexState,
                 isLast,
                 isFirst,
                 itemStyle,
               }) {
   const [isActive, setIsActive] = useState(false);
   useEffect(() => {
-    const isActiveState = index === currentIndex;
+    const isActiveState = index === currentIndexState;
     setIsActive(isActiveState);
-    onPressItem(isActiveState, false, isActive && index !== currentIndex);
-  }, [currentIndex]);
+    onPressItem(isActiveState, false, isActive && index !== currentIndexState);
+  }, [currentIndexState]);
   const onPressItem = (isActive, isEvent, wasActive) => {
     if (isEvent) {
       onPress(index);
@@ -156,14 +161,14 @@ function Item({
       }
     }
   };
-  return <Pressable onPress={() => onPressItem(isActive, true, isActive && index !== currentIndex)}
+  return <Pressable onPress={() => onPressItem(isActive, true, isActive && index !== currentIndexState)}
                     style={[css('flex-1'), itemStyle]}>
     <View onLayout={index === 1 ? onLayout : undefined}
           style={itemStyle}>
       {renderItem({
         item,
         index: index - 1,
-        isSelected: index === currentIndex,
+        isSelected: index === currentIndexState,
         isLast,
         isFirst,
       })}
