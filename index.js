@@ -7,8 +7,9 @@ import _keys from 'lodash.keys';
 import _pick from 'lodash.pick';
 import Color from 'color';
 import defaultClasses from './classes.js';
-import Popover from './utils/popover.js';
-import HorizontalSelector from './utils/horizontal.selector.js';
+import Popover from './components/popover.js';
+import HorizontalSelector from './components/horizontal.selector.js';
+import {ejectDynamicAndStatic, generateDynamicClasses} from './utils/string.utils';
 
 let classes;
 let withLogs;
@@ -588,11 +589,22 @@ const init = (opts = {
  */
 const css = (styles) => {
   if (typeof styles === 'string') {
-    const picked = _pick(classes, styles.split(' '));
+
+    const {dynamicValues} = ejectDynamicAndStatic(styles);
+
+    /**
+     * Generate dynamic styles
+     *
+     */
+    const dynamicClasses = generateDynamicClasses(dynamicValues);
+    const createdDynamicStyles = EStyleSheet.create(dynamicClasses);
+    const fullClasses = _merge(classes, createdDynamicStyles);
+
+    const picked = _pick(fullClasses, styles.split(' '));
     if (withLogs) {
       console.log('klazify', '\nclasses input -> ', styles, '\nstyles ->\n', picked);
     }
-    return _keys(picked).reduce((update, previous) => _mergeWith(update, picked[previous], (objValue, srcValue) => {
+    return _keys(picked).reduce((previous, current) => _mergeWith(previous, picked[current], (objValue, srcValue) => {
       if (Array.isArray(objValue)) {
         return objValue.concat(srcValue);
       }
