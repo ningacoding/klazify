@@ -5,6 +5,7 @@ import _merge from 'lodash.merge';
 import _mergeWith from 'lodash.mergewith';
 import _keys from 'lodash.keys';
 import _pick from 'lodash.pick';
+import _isEmpty from 'lodash.isempty';
 import Color from 'color';
 import defaultClasses from './classes.js';
 import Popover from './components/popover.js';
@@ -597,8 +598,11 @@ const css = (styles) => {
      *
      */
     const dynamicClasses = generateDynamicClasses(dynamicValues);
-    const createdDynamicStyles = EStyleSheet.create(dynamicClasses);
-    const fullClasses = _merge(classes, createdDynamicStyles);
+    let createdDynamicStyles;
+    if (!_isEmpty(dynamicClasses)) {
+      createdDynamicStyles = EStyleSheet.create(dynamicClasses);
+    }
+    const fullClasses = _merge(classes, createdDynamicStyles || {});
 
     const picked = _pick(fullClasses, styles.split(' '));
     if (withLogs) {
