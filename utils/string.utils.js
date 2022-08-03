@@ -157,7 +157,7 @@ export function generateDynamicClasses(dynamicValues, rem) {
       };
     }
     return {
-      [key + dynamicValues[key]]: {
+      [key + '[' + dynamicValues[key] + ']']: {
         [prop1a + (prop1b || '')]: value,
       },
     };
