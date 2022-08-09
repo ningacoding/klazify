@@ -21,6 +21,7 @@ export default function HorizontalSelector({
                                              omitAnimationSelector = false,
                                              onItemSelected,
                                              onItemUnselected,
+                                             disabled = false,
                                            }) {
 
   const viewSelectorRef = useRef();
@@ -125,7 +126,8 @@ export default function HorizontalSelector({
                      onPress={onPress}
                      renderItem={renderItem}
                      onItemSelected={onItemSelected}
-                     onItemUnselected={onItemUnselected}/>;
+                     onItemUnselected={onItemUnselected}
+                     disabled={disabled}/>;
       })}
     </View>
   </View>;
@@ -143,6 +145,7 @@ function Item({
                 isLast,
                 isFirst,
                 itemStyle,
+                disabled,
               }) {
   const [isActive, setIsActive] = useState(false);
   useEffect(() => {
@@ -151,6 +154,9 @@ function Item({
     onPressItem(isActiveState, false, isActive && index !== currentIndexState);
   }, [currentIndexState]);
   const onPressItem = (isActive, isEvent, wasActive) => {
+    if (disabled && !isEvent) {
+      return;
+    }
     if (isEvent) {
       onPress(index);
     }
@@ -164,7 +170,8 @@ function Item({
       }
     }
   };
-  return <Pressable onPress={() => onPressItem(isActive, true, isActive && index !== currentIndexState)}
+  const Container = disabled ? View : Pressable;
+  return <Container onPress={() => onPressItem(isActive, true, isActive && index !== currentIndexState)}
                     style={[css('flex-1'), itemStyle]}>
     <View onLayout={index === 1 ? onLayout : undefined}
           style={itemStyle}>
@@ -176,5 +183,5 @@ function Item({
         isFirst,
       })}
     </View>
-  </Pressable>;
+  </Container>;
 }
