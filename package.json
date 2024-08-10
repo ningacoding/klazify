@@ -1,13 +1,13 @@
 {
   "name": "klazify",
-  "version": "1.1.4-beta1c",
+  "version": "1.1.5-beta1c",
   "description": "Fast, Reusable, React Native stylesheets classes.",
   "main": "index.js",
   "scripts": {
     "publish": "npm publish"
   },
   "repository": {
-    "url": "https://github.com/ningacoding/klazify.git",
+    "url": "git+https://github.com/ningacoding/klazify.git",
     "type": "git"
   },
   "keywords": [
