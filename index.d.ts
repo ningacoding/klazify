@@ -2,11 +2,11 @@ import {ListRenderItem} from 'react-native';
 import * as React from 'react';
 
 declare module 'klazify' {
-  
+
   import {StyleProp, ViewStyle} from 'react-native';
   // @ts-ignore
   import Color = require('color');
-  
+
   /**
    * This method must be run before css() method.
    * @param opts
@@ -277,7 +277,7 @@ declare module 'klazify' {
     },
     logs?: boolean,
   });
-  
+
   /**
    * Applies all rules for StyleSheets (from react-native)
    * and EStyleSheets (from react-native-extended-stylesheet)
@@ -286,7 +286,7 @@ declare module 'klazify' {
    * @private
    */
   function css(styles: string | object);
-  
+
   /**
    * Returns a variable value.
    * Remember to run init() method at app startup.
@@ -294,7 +294,7 @@ declare module 'klazify' {
    * @private
    */
   function value(variableName: string): any;
-  
+
   /**
    * Returns a color value.
    * Check npm package 'color' for more info.
@@ -303,7 +303,7 @@ declare module 'klazify' {
    * @private
    */
   function color(variableName: string): Color<any>;
-  
+
   /**
    * Component that shows a popup layout.
    * Remember to run init() method at app startup.
@@ -315,16 +315,24 @@ declare module 'klazify' {
     contentStyle?: StyleProp<ViewStyle> | undefined;
     popupStyle?: StyleProp<ViewStyle> | undefined;
   }
-  
+
   /**
    * Component with useful selector with animation.
    * Remember to run init() method at app startup.
    */
+  interface RenderItemType<ItemT> {
+    item: ItemT,
+    index: number,
+    isSelected: boolean,
+    isLast: boolean,
+    isFirst: boolean,
+  }
+
   interface HorizontalSelectorProps<ItemT> {
     data: any[];
     initialIndex?: number;
     extraData?: any;
-    renderItem?: ListRenderItem<ItemT> | null | undefined;
+    renderItem?: RenderItemType<ItemT>;
     renderIndicator?: ListRenderItem<ItemT> | null | undefined;
     itemStyle?: StyleProp<ViewStyle> | undefined;
     containerStyle?: StyleProp<ViewStyle> | undefined;
@@ -338,17 +346,17 @@ declare module 'klazify' {
     onItemSelected?: ({item: any, index: number}) => void;
     onItemUnselected?: ({item: any, index: number}) => void;
   }
-  
+
   // noinspection JSUnusedGlobalSymbols
   class Popover extends React.Component<PopoverProps> {
   }
-  
+
   // noinspection JSUnusedGlobalSymbols
   class HorizontalSelector extends React.Component<HorizontalSelectorProps<any>, any> {
   }
-  
+
   export {init, css, color, value, Popover, HorizontalSelector};
-  
+
 }
 
 type NotDefault<T> = T extends 'default' ? never : T;
