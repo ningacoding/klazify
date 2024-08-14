@@ -1,5 +1,6 @@
 import {ListRenderItem} from 'react-native';
 import * as React from 'react';
+import {ReactNode} from 'react';
 
 declare module 'klazify' {
 
@@ -320,20 +321,20 @@ declare module 'klazify' {
    * Component with useful selector with animation.
    * Remember to run init() method at app startup.
    */
-  interface RenderItemType<ItemT> {
-    item: ItemT,
-    index: number,
-    isSelected: boolean,
-    isLast: boolean,
-    isFirst: boolean,
+  interface RenderItemType {
+    item?: any,
+    index?: number,
+    isSelected?: boolean,
+    isLast?: boolean,
+    isFirst?: boolean,
   }
 
-  interface HorizontalSelectorProps<ItemT> {
+  interface HorizontalSelectorProps {
     data: any[];
     initialIndex?: number;
     extraData?: any;
-    renderItem?: RenderItemType<ItemT>;
-    renderIndicator?: ListRenderItem<ItemT> | null | undefined;
+    renderItem?: (props: RenderItemType) => void;
+    renderIndicator?: Function | null | undefined;
     itemStyle?: StyleProp<ViewStyle> | undefined;
     containerStyle?: StyleProp<ViewStyle> | undefined;
     selectorStyle?: StyleProp<ViewStyle> | undefined;
@@ -352,7 +353,7 @@ declare module 'klazify' {
   }
 
   // noinspection JSUnusedGlobalSymbols
-  class HorizontalSelector extends React.Component<HorizontalSelectorProps<any>, any> {
+  class HorizontalSelector extends React.Component<HorizontalSelectorProps, any> {
   }
 
   export {init, css, color, value, Popover, HorizontalSelector};
