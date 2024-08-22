@@ -332,6 +332,7 @@ declare module 'klazify' {
   interface HorizontalSelectorProps {
     data: any[];
     initialIndex?: number;
+    currentIndex?: number;
     extraData?: any;
     renderItem?: (props: RenderItemType) => void;
     renderIndicator?: Function | null | undefined;
